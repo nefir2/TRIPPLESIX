@@ -21,19 +21,6 @@ namespace TRIPPLESIX
 		}
 
 		/// <summary>
-		/// обработчик события закрытия формы на крестик.
-		/// </summary>
-		/// <remarks>
-		/// при нажатии на крестик на одной из форм, закроется вся программа.
-		/// </remarks>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void Closer(object sender, FormClosingEventArgs e)
-		{
-			Application.Exit();
-		}
-
-		/// <summary>
 		/// обработчик события нажатия на кнопку "к кнопочкам".
 		/// </summary>
 		/// <remarks>
@@ -46,6 +33,21 @@ namespace TRIPPLESIX
 			Form1 f1 = new Form1(); //создание объекта первой формы.
 			f1.Show(); //отображение первой формы.
 			this.Hide(); //скрытие этой формы.
-        }
+		}
+
+
+		//					закрытие всех форм на крестик.
+		/// <summary>
+		/// обработчик события закрытия формы на крестик.
+		/// </summary>
+		/// <remarks>
+		/// при нажатии на крестик на одной из форм, закроется вся программа.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Closer(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }

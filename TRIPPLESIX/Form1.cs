@@ -42,22 +42,9 @@ namespace TRIPPLESIX
 		/// </summary>
 		Form6 f6 = new Form6();
 
-
 		//методы
-		//		обработчики событий.
-		/// <summary>
-		/// обработчик события закрытия формы на крестик.
-		/// </summary>
-		/// <remarks>
-		/// при нажатии на крестик на одной из форм, закроется вся программа.
-		/// </remarks>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void Closer(object sender, FormClosingEventArgs e)
-		{
-			Application.Exit();
-		}
 
+		//		обработчики событий.
 		/// <summary>
 		/// обработчик события нажатия на кнопке Form2.
 		/// </summary>
@@ -111,6 +98,21 @@ namespace TRIPPLESIX
 		{
 			f6.Show(); //открытие нажатой формы.
 			this.Hide(); //скрытие этой формы.
+		}
+
+
+		//					закрытие всех форм на крестик.
+		/// <summary>
+		/// обработчик события закрытия формы на крестик.
+		/// </summary>
+		/// <remarks>
+		/// при нажатии на крестик на одной из форм, закроется вся программа.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Closer(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }
