@@ -65,7 +65,7 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void changeForm2(object sender, EventArgs e)
 		{
-			f2.Show(); //открытие указанной формы.
+			f2.Show(); //открытие нажатой формы.
 			this.Hide(); //скрытие этой формы.
 		}
 
@@ -76,8 +76,8 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void changeForm3(object sender, EventArgs e)
 		{
-			f3.Show();
-			this.Hide();
+			f3.Show(); //открытие нажатой формы.
+			this.Hide(); //скрытие этой формы.
 		}
 
 		/// <summary>
@@ -87,8 +87,8 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void changeForm4(object sender, EventArgs e)
 		{
-			f4.Show();
-			this.Hide();
+			f4.Show(); //открытие нажатой формы.
+			this.Hide(); //скрытие этой формы.
 		}
 
 		/// <summary>
@@ -98,8 +98,8 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void changeForm5(object sender, EventArgs e)
 		{
-			f5.Show();
-			this.Hide();
+			f5.Show(); //открытие нажатой формы.
+			this.Hide(); //скрытие этой формы.
 		}
 
 		/// <summary>
@@ -109,8 +109,8 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void changeForm6(object sender, EventArgs e)
 		{
-			f6.Show();
-			this.Hide();
+			f6.Show(); //открытие нажатой формы.
+			this.Hide(); //скрытие этой формы.
 		}
 	}
 }
