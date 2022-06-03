@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -114,5 +116,15 @@ namespace TRIPPLESIX
 		{
 			Application.Exit();
 		}
-	}
+
+		/// <summary>
+		/// обрабтчик события при нажатии на кнопку не связанную с формами.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void OpenSource(object sender, EventArgs e)
+        {
+			Process.Start("https://github.com/nefir2/TRIPPLESIX");
+        }
+    }
 }
