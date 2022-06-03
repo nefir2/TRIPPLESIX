@@ -12,6 +12,9 @@ namespace TRIPPLESIX
 {
 	public partial class Form1 : Form
 	{
+		/// <summary>
+		/// конструктор первой формы.
+		/// </summary>
 		public Form1()
 		{
 			InitializeComponent();
@@ -41,6 +44,7 @@ namespace TRIPPLESIX
 
 
 		//методы
+		//		обработчики событий.
 		/// <summary>
 		/// обработчик события закрытия формы на крестик.
 		/// </summary>

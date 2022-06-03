@@ -12,6 +12,9 @@ namespace TRIPPLESIX
 {
 	public partial class Form3 : Form
 	{
+		/// <summary>
+		/// конструктор третьей формы.
+		/// </summary>
 		public Form3()
 		{
 			InitializeComponent();
