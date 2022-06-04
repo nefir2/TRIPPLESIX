@@ -20,6 +20,8 @@ namespace TRIPPLESIX
 			InitializeComponent();
 		}
 
+
+		//важные методы для всех форм.
 		/// <summary>
 		/// обработчик события нажатия на кнопку "к кнопочкам".
 		/// </summary>
@@ -30,11 +32,10 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void Backer(object sender, EventArgs e)
 		{
-			Form1 f1 = new Form1(); //создание объекта первой формы.
+			Buttoner f1 = new Buttoner(); //создание объекта первой формы.
 			f1.Show(); //отображение первой формы.
 			this.Hide(); //скрытие этой формы.
 		}
-
 
 		//					закрытие всех форм на крестик.
 		/// <summary>
