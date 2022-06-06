@@ -18,69 +18,60 @@ namespace TRIPPLESIX
 		public conv()
 		{
 			InitializeComponent();
+			labelException.Text = "";
+			sixteenBox.Text = Convert.ToString(long.MinValue, 16);
+			eightBox.Text = Convert.ToString(long.MaxValue, 8);
+			twoBox.Text = Convert.ToString(long.MaxValue, 2);
+			tenBox.Text = Convert.ToString(long.MaxValue);
+			tenBox.SelectAll();
 		}
 
+		//where my last code???
 		/// <summary>
 		/// обработчик события нажатия на клавишу при фокусе на одном полей ввода.
 		/// </summary>
-		/// <param name="sender">кто именно отправил событие.</param>
+		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void ConvertBase(object sender, KeyPressEventArgs e)
+		private void ConverterBase(object sender, KeyEventArgs e)
 		{
-			TextBox who = sender as TextBox;
+			labelException.Text = "";
+			if (tenBox.Text == "")
+			{
+				sixteenBox.Text = "";
+				eightBox.Text = "";
+				twoBox.Text = "";
+				return;
+			}
 			try
 			{
-				if (who.Name == "tenBox")
-				{
-					sixteenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 16);
-					eightBox.Text = Convert.ToString(int.Parse(tenBox.Text), 8);
-					twoBox.Text = Convert.ToString(int.Parse(tenBox.Text), 2);
-				}
-				else if (who.Name == "sixteenBox")
-				{
-					eightBox.Text = Convert.ToString(int.Parse(tenBox.Text), 8);
-					tenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 10);
-					twoBox.Text = Convert.ToString(int.Parse(tenBox.Text), 2);
-				}
-				else if (who.Name == "eightBox")
-				{
-					sixteenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 16);
-					tenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 10);
-					twoBox.Text = Convert.ToString(int.Parse(tenBox.Text), 2);
-				}
-				else if (who.Name == "twoBox")
-				{
-					sixteenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 16);
-					eightBox.Text = Convert.ToString(int.Parse(tenBox.Text), 8);
-					tenBox.Text = Convert.ToString(int.Parse(tenBox.Text), 2);
-				}
+				sixteenBox.Text = Convert.ToString(long.Parse(tenBox.Text), 16);
+				eightBox.Text = Convert.ToString(long.Parse(tenBox.Text), 8);
+				twoBox.Text = Convert.ToString(long.Parse(tenBox.Text), 2);
 			}
-            catch (ArgumentException ex)
-            {
+			catch (ArgumentException ex) //неизвестный 
+			{
 				MessageBox.Show("ты чо наделол, я в лицо получил эти буквы. теперь сиди и сам разбирайся чем я получил по морде.\n" + ex, "это что");
-            }
-            catch (FormatException)
-            {
-				labelException.Text = "ну вот ты и ввёл буквы в число. это всё, чего ты добился в жизни?";
-            }
+			}
+			catch (FormatException)
+			{
+				labelException.Text = "ну вот ты и ввёл непонятно что вместо числа. это всё, чего ты добился в жизни?";
+			}
 			catch (OverflowException)
-            {
-				labelException.Text = "ну сам понимаешь, слишком много цифр это не хорошо.";
-            }
+			{
+				labelException.Text = "ну сам понимаешь, слишком большое значение - это не хорошо.";
+			}
 		}
 
-
-
 		//важные методы для всех форм.
-			/// <summary>
-			/// обработчик события нажатия на кнопку "к кнопочкам".
-			/// </summary>
-			/// <remarks>
-			/// при нажатии на кнопку, метод возвращает из остальных форм обратно в первую.
-			/// </remarks>
-			/// <param name="sender"></param>
-			/// <param name="e"></param>
-			private void Backer(object sender, EventArgs e)
+		/// <summary>
+		/// обработчик события нажатия на кнопку "к кнопочкам".
+		/// </summary>
+		/// <remarks>
+		/// при нажатии на кнопку, метод возвращает из остальных форм обратно в первую.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Backer(object sender, EventArgs e)
 		{
 			Buttoner f1 = new Buttoner(); //создание объекта первой формы.
 			f1.Show(); //отображение первой формы.
@@ -100,5 +91,5 @@ namespace TRIPPLESIX
 		{
 			Application.Exit();
 		}
-	}
+    }
 }
