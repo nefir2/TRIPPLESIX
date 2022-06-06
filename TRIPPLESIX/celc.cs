@@ -33,7 +33,7 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// знак.
 		/// </summary>
-		char sign = '.';
+		char sign = '+';
 		/// <summary>
 		/// поле с информацией о кнопке.
 		/// </summary>
@@ -48,36 +48,6 @@ namespace TRIPPLESIX
 		bool haveAns = false;
 
 		//методы
-		private decimal GetAns()
-		{
-			switch (sign)
-			{
-				case '+':
-					return left + right;
-				case '-':
-					return left - right;
-				case '*':
-					return left * right;
-				case '/':
-					return left / right;
-				case '%':
-					return left % right;
-				case '^':
-					return (decimal)Math.Pow((double)left, (double)right);
-				default:
-					return AnsOne();
-			}
-		}
-		private decimal AnsOne()
-		{
-			switch (sign)
-			{
-				case '!':
-					return Factorial(left);
-				default:
-					return 0;
-			}
-		}
 		/// <summary>
 		/// метод возвращающий факториал числа.
 		/// </summary>
@@ -111,76 +81,11 @@ namespace TRIPPLESIX
 				for (int i = 0; i < b; i++) ans *= a; //цикл для получения числа a в степени b
 			}
 			catch (OverflowException ex) //если в цикле произошло переполнение
-            {
+			{
 				MessageBox.Show("ты мне тут слишком бальшые цыферки не набирай, я тут взорву тебе ща комп понял!!\n" + ex, "слыыш");
 				return -1; //вывод сообщения об этом и возврат числа -1.
-            }
-			return ans; //возврат числа если всё прошло успешно.
-		}
-		private void getleft()
-		{
-			//if (isHaveSign) right = int.Parse(problemBox.Text); else { }
-			left = int.Parse(problemBox.Text);
-			problemBox.Text = "";
-		}
-		private void Calc()
-		{
-			switch (who.Text)
-			{
-				case "0":
-				case "1":
-				case "2":
-				case "3":
-				case "4":
-				case "5":
-				case "6":
-				case "7":
-				case "8":
-				case "9":
-					problemBox.Text += who.Text;
-					break;
-				case "+":
-					sign = '+';
-					if (isHaveSign) { }
-					else
-					{
-						getleft();
-						isHaveSign = true;
-					}
-					break;
-				case "-":
-					sign = '-';
-					isHaveSign = true;
-					break;
-				case "×":
-					sign = '*';
-					isHaveSign = true;
-					break;
-				case "÷":
-					sign = '/';
-					isHaveSign = true;
-					break;
-				case "mod":
-					sign = '%';
-					isHaveSign = true;
-					break;
-				case "!":
-					sign = '!';
-					isHaveSign = true;
-					break;
-				case "^":
-					sign = '^';
-					isHaveSign = true;
-					break;
-				case "=":
-					isHaveSign = false;
-					return;
-					//return $"{GetAns()}";
-				default:
-					isHaveSign = false;
-					return;
-					//return "0";
 			}
+			return ans; //возврат числа если всё прошло успешно.
 		}
 		/// <summary>
 		/// метод для вывода в окно нажимаемых кнопок или других возвращаемых значений.
@@ -204,8 +109,17 @@ namespace TRIPPLESIX
 				case "!": //если нажат знак факториала
 					if (problemBox.Text.Length != 0)
 					{ //и если в окне есть хотя бы что-то, то
-						left = int.Parse(problemBox.Text); //парс чисел с окна в переменную
-						problemBox.Text = $"{Factorial(left)}"; //пересчёт и вывод этого числа.
+						left = decimal.Parse(problemBox.Text); //парс чисел с окна в переменную
+						decimal fact = Factorial(left);
+						if (fact == -1)
+						{
+							problemBox.Text = "";
+						}
+						else
+						{
+							problemBox.Text = $"{fact}"; //пересчёт и вывод этого числа.
+						}
+						haveAns = true;
 					}
 					break;
 				case "mod":
@@ -213,8 +127,11 @@ namespace TRIPPLESIX
 					inpAns(left % right);
 					break;
 				case "^":
-					inpAns(Power(left, right));
+					decimal pow = Power(left, right);
+					if (pow == -1) problemBox.Text = "";
+					else inpAns(pow);
 					break;
+
 				default:
 					break;
 			}
@@ -229,14 +146,14 @@ namespace TRIPPLESIX
 			{
 				if (problemBox.Text != "")
 				{
-					left = int.Parse(problemBox.Text);
+					left = decimal.Parse(problemBox.Text);
 					problemBox.Text = "";
 					isHaveSign = true;
 				}
 			}
 			else
 			{
-				right = int.Parse(problemBox.Text);
+				right = decimal.Parse(problemBox.Text);
 				haveAns = true;
 				problemBox.Text = $"{ans}";
 				isHaveSign = false;
@@ -262,7 +179,7 @@ namespace TRIPPLESIX
 		/// при нажатии на кнопку вызывается этот метод, <br/>
 		/// с помощью <paramref name="sender"/> определяется на какую именно кнопку нажали. <br/>
 		/// </remarks>
-		/// <param name="sender">отправитель события.</param>
+		/// <param name="sender">отправитель события (кто именно нажал на кнопку).</param>
 		/// <param name="e"></param>
 		private void BtnsClick(object sender, EventArgs e)
 		{
@@ -272,7 +189,7 @@ namespace TRIPPLESIX
 			{                                 //то очищаются все поля и окно.
 				left = 0;
 				right = 0;
-				sign = '.';
+				sign = '+';
 				who = null; 
 				isHaveSign = false;
 				haveAns = false;
@@ -282,7 +199,7 @@ namespace TRIPPLESIX
 			else if (who.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число.
 			if (haveAns) //если в окне есть ответ, при нажатии любой другой клавиши:
 			{ 				
-				left = int.Parse(problemBox.Text); //ответ запоминается как левое число,
+				if (problemBox.Text != "") left = decimal.Parse(problemBox.Text); //ответ запоминается как левое число,
 				problemBox.Text = ""; //ответ в окне стирается.
 				haveAns = false;
 			}

@@ -36,52 +36,58 @@ namespace TRIPPLESIX
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 80);
+            this.button1.Size = new System.Drawing.Size(85, 80);
             this.button1.TabIndex = 0;
-            this.button1.Text = "CALC";
+            this.button1.Text = "CLAC";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.changeForm2);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(98, 12);
+            this.button2.Location = new System.Drawing.Point(94, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 80);
+            this.button2.Size = new System.Drawing.Size(85, 80);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Form3";
+            this.button2.Text = "KoNvErTeR sisTeM sChIsLeNiY";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.changeForm3);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Navy;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(184, 12);
+            this.button3.Location = new System.Drawing.Point(185, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 80);
+            this.button3.Size = new System.Drawing.Size(85, 80);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Form4";
+            this.button3.Text = "shiphrater";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.changeForm4);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Navy;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(270, 12);
+            this.button4.Location = new System.Drawing.Point(276, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 80);
+            this.button4.Size = new System.Drawing.Size(85, 80);
             this.button4.TabIndex = 3;
             this.button4.Text = "Form5";
             this.button4.UseVisualStyleBackColor = false;
@@ -91,12 +97,14 @@ namespace TRIPPLESIX
             // 
             this.button5.BackColor = System.Drawing.Color.Maroon;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.SetColumnSpan(this.button5, 3);
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(33, 183);
+            this.button5.Location = new System.Drawing.Point(94, 174);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(318, 26);
+            this.button5.Size = new System.Drawing.Size(268, 25);
             this.button5.TabIndex = 4;
             this.button5.TabStop = false;
             this.button5.Text = "＜ー тоже самое, но в этой программе";
@@ -110,29 +118,47 @@ namespace TRIPPLESIX
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.Cursor = System.Windows.Forms.Cursors.Help;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(1, 183);
+            this.button6.Location = new System.Drawing.Point(63, 174);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(26, 26);
+            this.button6.Size = new System.Drawing.Size(25, 25);
             this.button6.TabIndex = 5;
             this.button6.TabStop = false;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.OpenSource);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(365, 202);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
             // Buttoner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(353, 210);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(365, 202);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -141,6 +167,7 @@ namespace TRIPPLESIX
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "кнопочная";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Closer);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -153,6 +180,7 @@ namespace TRIPPLESIX
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

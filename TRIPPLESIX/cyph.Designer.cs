@@ -1,7 +1,7 @@
 ﻿
 namespace TRIPPLESIX
 {
-    partial class Form3
+    partial class cyph
     {
         /// <summary>
         /// Required designer variable.
@@ -42,15 +42,15 @@ namespace TRIPPLESIX
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Backer);
             // 
-            // Form3
+            // cyph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "Form3";
+            this.Name = "cyph";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "психр";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Closer);
             this.ResumeLayout(false);
 

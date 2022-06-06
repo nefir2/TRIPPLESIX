@@ -30,11 +30,11 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// третья форма.
 		/// </summary>
-		Form3 f3 = new Form3();
+		conv f3 = new conv();
 		/// <summary>
 		/// четвёртая форма.
 		/// </summary>
-		Form4 f4 = new Form4();
+		cyph f4 = new cyph();
 		/// <summary>
 		/// пятая форма.
 		/// </summary>

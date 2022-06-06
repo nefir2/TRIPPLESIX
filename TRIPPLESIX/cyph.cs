@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace TRIPPLESIX
 {
-	public partial class Form3 : Form
+	public partial class cyph : Form
 	{
 		/// <summary>
-		/// конструктор третьей формы.
+		/// конструктор четвёртой формы.
 		/// </summary>
-		public Form3()
+		public cyph()
 		{
 			InitializeComponent();
 		}
