@@ -36,7 +36,7 @@ namespace TRIPPLESIX
 			{
 				for (int i = 0; i < inpBox.Text.Length; i++)
 				{
-					mes[i] = Convert.ToChar(inpBox.Text[i] ^ key);
+					mes.Append(Convert.ToChar(inpBox.Text[i] ^ key));
 				}
 			}
 			return mes.ToString();
@@ -52,7 +52,8 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void SecretTheMess(object sender, KeyEventArgs e)
 		{
-			if (keyBox.Text == "") keyBox.Text = "15"; //если ключ будет пустым.
+			TextBox who = sender as TextBox;
+			if (who.Name == "inpBox" && keyBox.Text == "") keyBox.Text = "15"; //если ключ будет пустым.
 			try
 			{
 				key = int.Parse(keyBox.Text); //сохранение значение ключа в собственное поле.

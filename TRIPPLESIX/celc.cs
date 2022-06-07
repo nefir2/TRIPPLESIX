@@ -196,7 +196,7 @@ namespace TRIPPLESIX
 				problemBox.Text = "";
 				return;
 			}
-			else if (who.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число.
+			else if (who.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число. //⌫
 			if (haveAns) //если в окне есть ответ, при нажатии любой другой клавиши:
 			{ 				
 				if (problemBox.Text != "") left = decimal.Parse(problemBox.Text); //ответ запоминается как левое число,

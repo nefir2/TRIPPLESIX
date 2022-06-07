@@ -99,6 +99,7 @@ namespace TRIPPLESIX
             this.keyBox.Size = new System.Drawing.Size(137, 23);
             this.keyBox.TabIndex = 2;
             this.keyBox.Text = "15";
+            this.keyBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SecretTheMess);
             // 
             // label1
             // 

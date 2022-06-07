@@ -77,7 +77,7 @@ namespace TRIPPLESIX
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 79);
             this.button3.TabIndex = 2;
-            this.button3.Text = "shiphratR";
+            this.button3.Text = "XOR shiphratR";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.changeForm4);
             // 
@@ -90,7 +90,7 @@ namespace TRIPPLESIX
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 79);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Form5";
+            this.button4.Text = "Binary translater.";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.changeForm5);
             // 
