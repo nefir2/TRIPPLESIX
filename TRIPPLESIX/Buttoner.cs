@@ -30,7 +30,7 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// пятая форма.
 		/// </summary>
-		TransBin f5 = new TransBin();
+		DontTouch f5 = new DontTouch();
 		/// <summary>
 		/// шестая форма.
 		/// </summary>

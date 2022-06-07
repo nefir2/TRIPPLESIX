@@ -70,11 +70,11 @@
     <Compile Include="cyph.Designer.cs">
       <DependentUpon>cyph.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransBin.cs">
+    <Compile Include="DontTouch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransBin.Designer.cs">
-      <DependentUpon>TransBin.cs</DependentUpon>
+    <Compile Include="DontTouch.Designer.cs">
+      <DependentUpon>DontTouch.cs</DependentUpon>
     </Compile>
     <Compile Include="github.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     <EmbeddedResource Include="cyph.resx">
       <DependentUpon>cyph.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransBin.resx">
-      <DependentUpon>TransBin.cs</DependentUpon>
+    <EmbeddedResource Include="DontTouch.resx">
+      <DependentUpon>DontTouch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="github.resx">
       <DependentUpon>github.cs</DependentUpon>

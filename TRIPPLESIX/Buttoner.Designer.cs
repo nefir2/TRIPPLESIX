@@ -85,20 +85,20 @@ namespace TRIPPLESIX
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Navy;
+            this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Location = new System.Drawing.Point(270, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 79);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Binary translater.";
+            this.button4.Text = "НЕ ТРОГАЙ!!!";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.changeForm5);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Maroon;
+            this.button5.BackColor = System.Drawing.Color.Green;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.SetColumnSpan(this.button5, 4);
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;

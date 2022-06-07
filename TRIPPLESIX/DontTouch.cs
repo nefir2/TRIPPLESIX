@@ -6,24 +6,46 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace TRIPPLESIX
 {
-	public partial class TransBin : Form
+	public partial class DontTouch : Form
 	{
 		/// <summary>
 		/// конструктор пятой формы.
 		/// </summary>
-		public TransBin()
+		public DontTouch()
 		{
 			InitializeComponent();
+			Runaway(this, new EventArgs());
 		}
 
+		//поля
+		Random rnd = new Random();
 
-		
+		//методы
+		/// <summary>
+		/// если пользователь наводится на кнопку, то кнопка убегает.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Runaway(object sender, EventArgs e)
+		{
+			Thread.Sleep(500);
+			button1.Location = new Point
+            {
+                X = rnd.Next(0, 1100),
+                Y = rnd.Next(0, 600)
+            };
+		}
 
+		private void Resizing(object sender, EventArgs e)
+		{
+			this.Hide();
+			Closer(this, new FormClosingEventArgs(CloseReason.UserClosing, false));
+		}
 
 		//важные методы для всех форм.
 		/// <summary>
@@ -53,25 +75,11 @@ namespace TRIPPLESIX
 		private void Closer(object sender, FormClosingEventArgs e)
 		{
 			//Application.Exit();
-			if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.TaskManagerClosing) //запрещает выход из программы нажатием на крестик и с помощью диспетчера задач.
-            {
-				TransBin tb = new TransBin();
+			if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.TaskManagerClosing)
+			{ //запрещает выход из программы нажатием на крестик и с помощью диспетчера задач.
+				DontTouch tb = new DontTouch();
 				tb.Show();
 			}
 		}
-
-		/// <summary>
-		/// если пользователь наводится на кнопку, то кнопка убегает.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-        private void Runaway(object sender, EventArgs e)
-        {
-			Random rnd = new Random();
-			Point x = new Point();
-			x.X = rnd.Next(0, 1100);
-			x.Y = rnd.Next(0, 600);
-			button1.Location = x;
-        }
     }
 }
