@@ -35,14 +35,14 @@ namespace TRIPPLESIX
             this.label1 = new System.Windows.Forms.Label();
             this.labelException = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.twoBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.eightBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.sixteenBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,30 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Size = new System.Drawing.Size(870, 477);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 75);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "ошибки:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 75);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ввод:";
+            // 
             // twoBox
             // 
             this.twoBox.BackColor = System.Drawing.SystemColors.InfoText;
@@ -208,30 +232,6 @@ namespace TRIPPLESIX
             this.label3.Size = new System.Drawing.Size(81, 75);
             this.label3.TabIndex = 6;
             this.label3.Text = "Base16";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 75);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ввод:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 150);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 75);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "ошибки:";
             // 
             // conv
             // 
