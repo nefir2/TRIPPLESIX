@@ -70,6 +70,7 @@ namespace TRIPPLESIX
             this.tenBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tenBox.ForeColor = System.Drawing.Color.Black;
             this.tenBox.Location = new System.Drawing.Point(90, 78);
+            this.tenBox.MaxLength = 19;
             this.tenBox.Name = "tenBox";
             this.tenBox.Size = new System.Drawing.Size(777, 23);
             this.tenBox.TabIndex = 0;

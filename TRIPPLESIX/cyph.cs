@@ -18,7 +18,56 @@ namespace TRIPPLESIX
 		public cyph()
 		{
 			InitializeComponent();
+			outpBox.Text = ""; //очистка значения окна вывода при запуске формы.
+			labelException.Text = ""; //очистка окна сообщения с ошибками.
 		}
+
+		//поля
+		/// <summary>
+		/// поле хранящее значение ключа с keyBox.
+		/// </summary>
+		int key;
+		//методы.
+
+		private string SetSecret()
+        {
+			StringBuilder mes = new StringBuilder();
+			if (inpBox.Text != "")
+			{
+				for (int i = 0; i < inpBox.Text.Length; i++)
+				{
+					mes[i] = Convert.ToChar(inpBox.Text[i] ^ key);
+				}
+			}
+			return mes.ToString();
+		}
+
+		/// <summary>
+		/// обработчик события поднятия клавиши, находясь в фокусе на inpBox.
+		/// </summary>
+		/// <remarks>
+		/// метод ожидает событие поднятие клавиши и выводит засекреченное сообщение в outpBox.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void SecretTheMess(object sender, KeyEventArgs e)
+		{
+			if (keyBox.Text == "") keyBox.Text = "15"; //если ключ будет пустым.
+			try
+			{
+				key = int.Parse(keyBox.Text); //сохранение значение ключа в собственное поле.
+				outpBox.Text = SetSecret();
+			}
+            catch (FormatException)
+            {
+				labelException.Text = "буквы.\n\nне.\n\nвводить.";
+            }
+			catch (OverflowException)
+            {
+				labelException.Text = "слишком.\n\nмного.\n\nчисел.";
+            }
+		}
+
 
 
 		//важные методы для всех форм.
@@ -50,5 +99,6 @@ namespace TRIPPLESIX
 		{
 			Application.Exit();
 		}
-	}
+
+    }
 }
