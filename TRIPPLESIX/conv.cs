@@ -19,7 +19,7 @@ namespace TRIPPLESIX
 		{
 			InitializeComponent();
 			labelException.Text = "";
-			sixteenBox.Text = Convert.ToString(long.MinValue, 16);
+			sixteenBox.Text = Convert.ToString(long.MaxValue, 16);
 			eightBox.Text = Convert.ToString(long.MaxValue, 8);
 			twoBox.Text = Convert.ToString(long.MaxValue, 2);
 			tenBox.Text = Convert.ToString(long.MaxValue);
