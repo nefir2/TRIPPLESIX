@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,57 +19,22 @@ namespace TRIPPLESIX
 		public TransBin()
 		{
 			InitializeComponent();
-			//checkBin.Checked = true;
 		}
 
-        ////поля
-        ///// <summary>
-        ///// поле где хранится состояние чекбокса.
-        ///// </summary>
-        //bool inBin = true;
 
-        ////методы
-
-        ///// <summary>
-        ///// метод переводит из 
-        ///// </summary>
-        ///// <remarks>
-        ///// угнаный метод.
-        ///// </remarks>
-        ///// <param name="data"></param>
-        ///// <returns></returns>
-        //public string ToBinaryString(byte[] data)
-        //{
-        //    return string.Join("", data.Select(byt => Convert.ToString(byt, 2).PadLeft(8, '0')));
-        //}
-
-        ///// <summary>
-        ///// обработчик события нажатия на чекбокс.
-        ///// </summary>
-        ///// <remarks>
-        ///// если на чекбокс произшло нажатие, то проверяется какое у него сейчас состояние, </br>
-        ///// и переносится в поле.
-        ///// </remarks>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void Check(object sender, EventArgs e)
-        //{
-        //    if (checkBin.Checked) inBin = true;
-        //    else inBin = false;
-        //}
+		
 
 
-
-        //важные методы для всех форм.
-        /// <summary>
-        /// обработчик события нажатия на кнопку "к кнопочкам".
-        /// </summary>
-        /// <remarks>
-        /// при нажатии на кнопку, метод возвращает из остальных форм обратно в первую.
-        /// </remarks>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Backer(object sender, EventArgs e)
+		//важные методы для всех форм.
+		/// <summary>
+		/// обработчик события нажатия на кнопку "к кнопочкам".
+		/// </summary>
+		/// <remarks>
+		/// при нажатии на кнопку, метод возвращает из остальных форм обратно в первую.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Backer(object sender, EventArgs e)
 		{
 			Buttoner f1 = new Buttoner(); //создание объекта первой формы.
 			f1.Show(); //отображение первой формы.
@@ -86,8 +52,26 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e)
 		{
-			Application.Exit();
+			//Application.Exit();
+			if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.TaskManagerClosing) //запрещает выход из программы нажатием на крестик и с помощью диспетчера задач.
+            {
+				TransBin tb = new TransBin();
+				tb.Show();
+			}
 		}
 
+		/// <summary>
+		/// если пользователь наводится на кнопку, то кнопка убегает.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void Runaway(object sender, EventArgs e)
+        {
+			Random rnd = new Random();
+			Point x = new Point();
+			x.X = rnd.Next(0, 1100);
+			x.Y = rnd.Next(0, 600);
+			button1.Location = x;
+        }
     }
 }
