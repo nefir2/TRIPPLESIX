@@ -38,7 +38,7 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// пятая форма.
 		/// </summary>
-		Form5 f5 = new Form5();
+		TransBin f5 = new TransBin();
 		/// <summary>
 		/// шестая форма.
 		/// </summary>

@@ -34,6 +34,7 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void ConverterBase(object sender, KeyEventArgs e)
 		{
+			
 			labelException.Text = "";
 			if (tenBox.Text == "")
 			{

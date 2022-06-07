@@ -169,6 +169,7 @@ namespace TRIPPLESIX
             this.twoBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.twoBox.Size = new System.Drawing.Size(777, 30);
             this.twoBox.TabIndex = 11;
+            this.twoBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label5
             // 
@@ -195,6 +196,7 @@ namespace TRIPPLESIX
             this.eightBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.eightBox.Size = new System.Drawing.Size(777, 30);
             this.eightBox.TabIndex = 9;
+            this.eightBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label4
             // 
@@ -221,6 +223,7 @@ namespace TRIPPLESIX
             this.sixteenBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sixteenBox.Size = new System.Drawing.Size(777, 30);
             this.sixteenBox.TabIndex = 7;
+            this.sixteenBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label3
             // 

@@ -98,7 +98,7 @@ namespace TRIPPLESIX
             this.keyBox.Name = "keyBox";
             this.keyBox.Size = new System.Drawing.Size(137, 23);
             this.keyBox.TabIndex = 2;
-            this.keyBox.Text = "15";
+            this.keyBox.Text = "13425";
             this.keyBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SecretTheMess);
             // 
             // label1
@@ -119,23 +119,25 @@ namespace TRIPPLESIX
             // 
             this.outpBox.BackColor = System.Drawing.Color.Black;
             this.outpBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.outpBox, 2);
             this.outpBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.outpBox.ForeColor = System.Drawing.Color.White;
             this.outpBox.Location = new System.Drawing.Point(3, 155);
             this.outpBox.Multiline = true;
             this.outpBox.Name = "outpBox";
             this.outpBox.ReadOnly = true;
-            this.outpBox.Size = new System.Drawing.Size(690, 481);
+            this.outpBox.Size = new System.Drawing.Size(737, 481);
             this.outpBox.TabIndex = 4;
             this.outpBox.Text = "here will be secret or unsecret message";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(434, 20);
+            this.label2.Size = new System.Drawing.Size(690, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "вводить секретные или не секретные сообщения сюда:";
             // 
@@ -143,24 +145,26 @@ namespace TRIPPLESIX
             // 
             this.inpBox.BackColor = System.Drawing.Color.Black;
             this.inpBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.inpBox, 2);
             this.inpBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inpBox.ForeColor = System.Drawing.Color.White;
             this.inpBox.Location = new System.Drawing.Point(3, 32);
             this.inpBox.Multiline = true;
             this.inpBox.Name = "inpBox";
-            this.inpBox.Size = new System.Drawing.Size(690, 104);
+            this.inpBox.Size = new System.Drawing.Size(737, 104);
             this.inpBox.TabIndex = 6;
             this.inpBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SecretTheMess);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(3, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(690, 13);
+            this.label3.Size = new System.Drawing.Size(737, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "вывод:";
             // 
@@ -171,7 +175,8 @@ namespace TRIPPLESIX
             this.labelException.ForeColor = System.Drawing.Color.DarkRed;
             this.labelException.Location = new System.Drawing.Point(746, 152);
             this.labelException.Name = "labelException";
-            this.labelException.Size = new System.Drawing.Size(137, 487);
+            this.tableLayoutPanel1.SetRowSpan(this.labelException, 2);
+            this.labelException.Size = new System.Drawing.Size(137, 515);
             this.labelException.TabIndex = 8;
             this.labelException.Text = "here will be messages if human trying make exception in textboxes";
             // 
@@ -182,7 +187,8 @@ namespace TRIPPLESIX
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(746, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 110);
+            this.tableLayoutPanel1.SetRowSpan(this.label4, 2);
+            this.label4.Size = new System.Drawing.Size(137, 123);
             this.label4.TabIndex = 9;
             this.label4.Text = "* в ключ можно поместить только число.";
             // 

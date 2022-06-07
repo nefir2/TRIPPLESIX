@@ -10,15 +10,53 @@ using System.Windows.Forms;
 
 namespace TRIPPLESIX
 {
-	public partial class Form5 : Form
+	public partial class TransBin : Form
 	{
 		/// <summary>
 		/// конструктор пятой формы.
 		/// </summary>
-		public Form5()
+		public TransBin()
 		{
 			InitializeComponent();
+			//checkBin.Checked = true;
 		}
+
+		////поля
+		///// <summary>
+		///// поле где хранится состояние чекбокса.
+		///// </summary>
+		//bool inBin = true;
+
+		////методы
+
+		///// <summary>
+		///// метод переводит из 
+		///// </summary>
+		///// <remarks>
+		///// угнаный метод.
+		///// </remarks>
+		///// <param name="data"></param>
+		///// <returns></returns>
+		//public string ToBinaryString(byte[] data)
+		//{
+		//	return string.Join("", data.Select(byt => Convert.ToString(byt, 2).PadLeft(8, '0')));
+		//}
+
+		///// <summary>
+		///// обработчик события нажатия на чекбокс.
+		///// </summary>
+		///// <remarks>
+		///// если на чекбокс произшло нажатие, то проверяется какое у него сейчас состояние, </br>
+		///// и переносится в поле.
+		///// </remarks>
+		///// <param name="sender"></param>
+		///// <param name="e"></param>
+		//private void Check(object sender, EventArgs e)
+		//{
+		//	if (checkBin.Checked) inBin = true;
+		//	else inBin = false;
+		//}
+
 
 
 		//важные методы для всех форм.
@@ -50,5 +88,6 @@ namespace TRIPPLESIX
 		{
 			Application.Exit();
 		}
-	}
+
+    }
 }
