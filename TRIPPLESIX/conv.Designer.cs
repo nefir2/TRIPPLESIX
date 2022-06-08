@@ -64,16 +64,19 @@ namespace TRIPPLESIX
             // 
             // tenBox
             // 
-            this.tenBox.BackColor = System.Drawing.Color.White;
-            this.tenBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tenBox.BackColor = System.Drawing.SystemColors.InfoText;
+            this.tenBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tenBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tenBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tenBox.ForeColor = System.Drawing.Color.Black;
-            this.tenBox.Location = new System.Drawing.Point(90, 78);
+            this.tenBox.ForeColor = System.Drawing.Color.White;
+            this.tenBox.Location = new System.Drawing.Point(90, 153);
             this.tenBox.MaxLength = 19;
             this.tenBox.Name = "tenBox";
-            this.tenBox.Size = new System.Drawing.Size(777, 23);
+            this.tenBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tenBox.Size = new System.Drawing.Size(777, 30);
             this.tenBox.TabIndex = 0;
+            this.tenBox.Click += new System.EventHandler(this.Selecter);
+            this.tenBox.Enter += new System.EventHandler(this.Selecter);
             this.tenBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label1
@@ -95,7 +98,7 @@ namespace TRIPPLESIX
             this.labelException.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelException.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelException.ForeColor = System.Drawing.Color.Maroon;
-            this.labelException.Location = new System.Drawing.Point(90, 150);
+            this.labelException.Location = new System.Drawing.Point(90, 75);
             this.labelException.Name = "labelException";
             this.labelException.Size = new System.Drawing.Size(777, 75);
             this.labelException.TabIndex = 4;
@@ -106,8 +109,8 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.twoBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.eightBox, 1, 4);
@@ -116,8 +119,8 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tenBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelException, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tenBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelException, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -138,7 +141,7 @@ namespace TRIPPLESIX
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 150);
+            this.label6.Location = new System.Drawing.Point(3, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 75);
             this.label6.TabIndex = 13;
@@ -150,11 +153,11 @@ namespace TRIPPLESIX
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 75);
+            this.label2.Location = new System.Drawing.Point(3, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 75);
             this.label2.TabIndex = 12;
-            this.label2.Text = "ввод:";
+            this.label2.Text = "Base10";
             // 
             // twoBox
             // 
@@ -165,10 +168,11 @@ namespace TRIPPLESIX
             this.twoBox.ForeColor = System.Drawing.Color.White;
             this.twoBox.Location = new System.Drawing.Point(90, 378);
             this.twoBox.Name = "twoBox";
-            this.twoBox.ReadOnly = true;
             this.twoBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.twoBox.Size = new System.Drawing.Size(777, 30);
             this.twoBox.TabIndex = 11;
+            this.twoBox.Click += new System.EventHandler(this.Selecter);
+            this.twoBox.Enter += new System.EventHandler(this.Selecter);
             this.twoBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label5
@@ -192,10 +196,11 @@ namespace TRIPPLESIX
             this.eightBox.ForeColor = System.Drawing.Color.White;
             this.eightBox.Location = new System.Drawing.Point(90, 303);
             this.eightBox.Name = "eightBox";
-            this.eightBox.ReadOnly = true;
             this.eightBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.eightBox.Size = new System.Drawing.Size(777, 30);
             this.eightBox.TabIndex = 9;
+            this.eightBox.Click += new System.EventHandler(this.Selecter);
+            this.eightBox.Enter += new System.EventHandler(this.Selecter);
             this.eightBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label4
@@ -219,10 +224,11 @@ namespace TRIPPLESIX
             this.sixteenBox.ForeColor = System.Drawing.Color.White;
             this.sixteenBox.Location = new System.Drawing.Point(90, 228);
             this.sixteenBox.Name = "sixteenBox";
-            this.sixteenBox.ReadOnly = true;
             this.sixteenBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sixteenBox.Size = new System.Drawing.Size(777, 30);
             this.sixteenBox.TabIndex = 7;
+            this.sixteenBox.Click += new System.EventHandler(this.Selecter);
+            this.sixteenBox.Enter += new System.EventHandler(this.Selecter);
             this.sixteenBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConverterBase);
             // 
             // label3

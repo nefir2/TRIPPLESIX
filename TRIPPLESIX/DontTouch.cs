@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace TRIPPLESIX
@@ -19,7 +12,7 @@ namespace TRIPPLESIX
 		public DontTouch()
 		{
 			InitializeComponent();
-			Runaway(this, new EventArgs());
+			NewLoca();
 		}
 
 		//поля
@@ -27,13 +20,15 @@ namespace TRIPPLESIX
 		/// поле с объектом рандома.
 		/// </summary>
 		Random rnd = new Random();
-
 		/// <summary>
 		/// поле с оставшимся временем для таймера.
 		/// </summary>
 		int secs;
 
 		//методы
+		/// <summary>
+		/// установка нового положения кнопки.
+		/// </summary>
 		private void NewLoca()
 		{
 			button1.Location = new Point
@@ -42,7 +37,7 @@ namespace TRIPPLESIX
 				Y = rnd.Next(0, 600)
 			};
 		}
-		//события
+		//		обработчики события
 		/// <summary>
 		/// если пользователь наводится на кнопку, то кнопка убегает.
 		/// </summary>
@@ -53,7 +48,11 @@ namespace TRIPPLESIX
 			secs = 2;
 			time.Start();
 		}
-
+		/// <summary>
+		/// таймер, для облегчения успеваемости нажатия кнопки.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void Timedout(object sender, EventArgs e)
 		{
 			if (secs > 0) secs--;
@@ -63,7 +62,14 @@ namespace TRIPPLESIX
 				NewLoca();
 			}
 		}
-
+		/// <summary>
+		/// обработчик события изменения окна.
+		/// </summary>
+		/// <remarks>
+		/// не позволяет изменить размер окна.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void Resizing(object sender, EventArgs e)
 		{
 			this.Hide();
@@ -99,7 +105,7 @@ namespace TRIPPLESIX
 		{
 			//Application.Exit();
 			if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.TaskManagerClosing)
-			{ //запрещает выход из программы нажатием на крестик и с помощью диспетчера задач.
+			{ //запрещает выход из программы нажатием на крестик или с помощью диспетчера задач.
 				DontTouch tb = new DontTouch();
 				tb.Show();
 			}

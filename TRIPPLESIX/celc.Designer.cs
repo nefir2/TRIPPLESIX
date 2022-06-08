@@ -32,7 +32,6 @@ namespace TRIPPLESIX
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(celc));
             this.btnback = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnnegater = new System.Windows.Forms.Button();
             this.btndel = new System.Windows.Forms.Button();
             this.btnclr = new System.Windows.Forms.Button();
             this.btnequals = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@ namespace TRIPPLESIX
             this.problemBox = new System.Windows.Forms.TextBox();
             this.btnzero = new System.Windows.Forms.Button();
             this.btnbsp = new System.Windows.Forms.Button();
+            this.labelLastValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +85,6 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btnnegater, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btndel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnclr, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnequals, 3, 6);
@@ -108,8 +107,9 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Controls.Add(this.btnmod, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.problemBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnback, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnzero, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnzero, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnbsp, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelLastValue, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -124,24 +124,6 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.99087F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(349, 509);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // btnnegater
-            // 
-            this.btnnegater.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnnegater.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnnegater.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnnegater.FlatAppearance.BorderSize = 0;
-            this.btnnegater.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnnegater.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.btnnegater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnegater.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnnegater.Location = new System.Drawing.Point(3, 417);
-            this.btnnegater.Name = "btnnegater";
-            this.btnnegater.Size = new System.Drawing.Size(81, 63);
-            this.btnnegater.TabIndex = 27;
-            this.btnnegater.Text = "+/-";
-            this.btnnegater.UseVisualStyleBackColor = false;
-            this.btnnegater.Click += new System.EventHandler(this.Negate);
             // 
             // btndel
             // 
@@ -506,8 +488,8 @@ namespace TRIPPLESIX
             // problemBox
             // 
             this.problemBox.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.problemBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.problemBox, 4);
+            this.problemBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.problemBox, 3);
             this.problemBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.problemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.problemBox.ForeColor = System.Drawing.Color.White;
@@ -515,12 +497,14 @@ namespace TRIPPLESIX
             this.problemBox.Multiline = true;
             this.problemBox.Name = "problemBox";
             this.problemBox.ReadOnly = true;
-            this.problemBox.Size = new System.Drawing.Size(343, 63);
+            this.problemBox.Size = new System.Drawing.Size(255, 63);
             this.problemBox.TabIndex = 19;
+            this.problemBox.TextChanged += new System.EventHandler(this.SetNum);
             // 
             // btnzero
             // 
             this.btnzero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.btnzero, 2);
             this.btnzero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnzero.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnzero.FlatAppearance.BorderSize = 0;
@@ -528,9 +512,9 @@ namespace TRIPPLESIX
             this.btnzero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btnzero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnzero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnzero.Location = new System.Drawing.Point(90, 417);
+            this.btnzero.Location = new System.Drawing.Point(3, 417);
             this.btnzero.Name = "btnzero";
-            this.btnzero.Size = new System.Drawing.Size(81, 63);
+            this.btnzero.Size = new System.Drawing.Size(168, 63);
             this.btnzero.TabIndex = 0;
             this.btnzero.Text = "0";
             this.btnzero.UseVisualStyleBackColor = false;
@@ -551,6 +535,19 @@ namespace TRIPPLESIX
             this.btnbsp.Text = "←";
             this.btnbsp.UseVisualStyleBackColor = false;
             this.btnbsp.Click += new System.EventHandler(this.Deleter);
+            // 
+            // labelLastValue
+            // 
+            this.labelLastValue.AutoSize = true;
+            this.labelLastValue.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.labelLastValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLastValue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelLastValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLastValue.Location = new System.Drawing.Point(264, 0);
+            this.labelLastValue.Name = "labelLastValue";
+            this.labelLastValue.Size = new System.Drawing.Size(82, 69);
+            this.labelLastValue.TabIndex = 28;
+            this.labelLastValue.Text = "here will be sitting last value";
             // 
             // celc
             // 
@@ -599,6 +596,6 @@ namespace TRIPPLESIX
         private System.Windows.Forms.Button btnclr;
         private System.Windows.Forms.Button btnbsp;
         private System.Windows.Forms.Button btndel;
-        private System.Windows.Forms.Button btnnegater;
+        private System.Windows.Forms.Label labelLastValue;
     }
 }

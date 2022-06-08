@@ -20,22 +20,26 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// поле хранящее значение ключа с keyBox.
 		/// </summary>
-		int key;
-		//методы.
+		ushort key;
 
+		//методы.
+		/// <summary>
+		/// метод возвращает текст помноженный на ключ.
+		/// </summary>
+		/// <returns></returns>
 		private string SetSecret()
-        {
-			StringBuilder mes = new StringBuilder();
-			if (inpBox.Text != "")
-			{
+		{
+			string mes = ""; //переменная для возврата полученного значения.
+			if (inpBox.Text != "") //если поле ввода не пустое
+			{	//проход по длине значения в поле ввода.
 				for (int i = 0; i < inpBox.Text.Length; i++)
-				{
-					mes.Append(Convert.ToChar(inpBox.Text[i] ^ key));
+				{ //добавление очередного символа возвращаемую строку.
+					mes += Convert.ToChar(inpBox.Text[i] ^ key); //сложение символов через "исключающее или".
 				}
 			}
-			return mes.ToString();
+			return mes; //возврат полученной строки.
 		}
-
+		//		обработчики событий.
 		/// <summary>
 		/// обработчик события поднятия клавиши, находясь в фокусе на inpBox.
 		/// </summary>
@@ -46,21 +50,24 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void SecretTheMess(object sender, KeyEventArgs e)
 		{
-			TextBox who = sender as TextBox;
-			if (who.Name == "inpBox" && keyBox.Text == "") keyBox.Text = "15"; //если ключ будет пустым.
-			try
+			labelException.Text = ""; //очистка места вывода ошибок.
+			TextBox who = sender as TextBox; //определение, кто отправил событие.
+
+			//если отправитель - главное поле ввода, и ключ пустой, то ключ возвращается к изначальному значению.
+			if (who.Name == "inpBox" && keyBox.Text == "") keyBox.Text = "13425"; //значение по умолчанию подобрано то, какое понравилось.
+			try //попытка преобразовать текст из места с ключом в поле ключа.
 			{
-				key = int.Parse(keyBox.Text); //сохранение значение ключа в собственное поле.
-				outpBox.Text = SetSecret();
+				key = ushort.Parse(keyBox.Text); //сохранение значение ключа в собственное поле.
+				outpBox.Text = SetSecret(); //вывод зашифрованного текста, при помощи ключа.
 			}
-            catch (FormatException)
-            {
-				labelException.Text = "буквы.\n\nне.\n\nвводить.";
-            }
-			catch (OverflowException)
-            {
-				labelException.Text = "слишком.\n\nмного.\n\nчисел.";
-            }
+			catch (FormatException) //если есть буквы в поле ввода ключа, или там ничего нет, то 
+			{
+				labelException.Text = "буквы.\n\nне.\n\nвводить."; //выводится ошибка в своё место.
+			}
+			catch (OverflowException) //если в ключ внесли слишком большое число, то 
+			{
+				labelException.Text = "слишком.\n\nмного.\n\nчисел."; //вывод ошибки в своё место.
+			}
 		}
 
 
@@ -91,6 +98,5 @@ namespace TRIPPLESIX
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
-
 	}
 }

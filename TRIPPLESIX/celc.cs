@@ -11,31 +11,32 @@ namespace TRIPPLESIX
 		/// </summary>
 		public celc()
 		{
-			InitializeComponent();
-
-			//метод устанавливающий стандартные значения полей.
-			UseDefault();
+			InitializeComponent(); //метод инициализирующий окно.
+			UseDefault(); //метод устанавливающий стандартные значения полей.
 		}
 
 		//поля
-		/// <summary>
-		/// вводимое число.
-		/// </summary>
-		decimal num;
-		/// <summary>
-		/// поле первого числа.
-		/// </summary>
-		decimal? left;
 		/// <summary>
 		/// поле второго числа.
 		/// </summary>
 		decimal? right;
 		/// <summary>
-		/// знак для ответов.
+		/// поле первого числа.
+		/// </summary>
+		decimal? left;
+		/// <summary>
+		/// вводимое число.
+		/// </summary>
+		decimal num;
+		/// <summary>
+		/// предыдущий знак действия.
+		/// </summary>
+		char prevsn;
+		/// <summary>
+		/// знак действия.
 		/// </summary>
 		char action;
-
-		//		кнопки
+		//		объекты с формы.
 		/// <summary>
 		/// текст с кнопки удаления последнего символа.
 		/// </summary>
@@ -53,21 +54,25 @@ namespace TRIPPLESIX
 		/// </summary>
 		string cl;
 
-
 		//методы
 		/// <summary>
 		/// метод для восстановления к значениям полей по умолчанию.
 		/// </summary>
 		private void UseDefault()
 		{
-			num = 0;
-			left = null;
+			//поля со значениями.
+			prevsn = '+';
+			action = '+';
 			right = null;
+			left = null;
+			num = 0;
 			//конпки
+			fact = btnfactorial.Text;
 			backspace = btnbsp.Text;
 			clrall = btndel.Text;
-			fact = btnfactorial.Text;
 			cl = btnclr.Text;
+			//экраны.
+			labelLastValue.Text = "";
 			problemBox.Text = "";
 		}
 		/// <summary>
@@ -146,29 +151,44 @@ namespace TRIPPLESIX
 		/// </remarks>
 		/// <param name="sign">знак действия.</param>
 		/// <returns>ответ из двух полей, в зависимости от указанного знака действия.</returns>
-		private decimal GetAns()
+		private decimal GetAns(char action)
 		{
 			decimal left = this.left ?? 0;
 			decimal right = this.right ?? 0;
-			switch (action)
+			try
 			{
-				case '^':
-					return Power(left, right);
-				case '%':
-					return left % right;
-				case '/':
-				case '÷':
-					return left / right;
-				case '*':
-				case '×':
-					return left * right;
-				case '-':
-					return left - right;
-				case '+':
-					return left + right;
-				default:
-					return 0;
+				switch (action)
+				{
+					case '^':
+						return Power(left, right);
+					case '%':
+						return left % right;
+					case '/':
+					case '÷':
+						return left / right;
+					case '*':
+					case '×':
+						return left * right;
+					case '-':
+						return left - right;
+					case '+':
+						return left + right;
+					default:
+						return 0;
+				}
 			}
+			catch (OverflowException ex) //если откуда-то ещё вылезло переполнение.
+			{
+				MessageBox.Show("ты мне тут слишком бальшые цыферки не набирай, я тут взорву тебе ща комп понял!!\n\n" + ex.Message, "слыыш");
+				UseDefault();
+				return 0;
+			}
+			catch (DivideByZeroException ex) //если произошло деление на 0.
+            {
+				MessageBox.Show("молодец! поздравляю! ты решил калькулятор!\n\n" + ex.Message, "успех!");
+				UseDefault();
+				return 0;
+            }
 		}
 		/// <summary>
 		/// метод возвращающий факториал какого либо числа.
@@ -182,6 +202,12 @@ namespace TRIPPLESIX
 			else if (this.left != null) return Factorial(left);
 			else return 0;
 		}
+		/// <summary>
+		/// установка значений с экрана в поля.
+		/// </summary>
+		/// <remarks>
+		/// устанавливает в поля <see cref="right"/> или <see cref="left"/> значения с экрана.
+		/// </remarks>
 		//		обработчики событий.
 		/// <summary>
 		/// обработчик событий нажатий на любую из кнопок.
@@ -219,33 +245,42 @@ namespace TRIPPLESIX
 			try { action = Convert.ToChar(btn.Text); } //попытка перевести текст с кнопки в тип char.
 			catch { action = '%'; } //если не получилось - это был 'mod'.
 
-            if (problemBox.Text != "") //если окно вывода не пустое
-			{
-				//если нажат '!'
-				if (btn.Text == fact)
-				{
-					if (left == null) left = num;
-					else if (right == null) right = num;
+			//сохранение последнего значения в специальное окно.
+			labelLastValue.Text = $"{problemBox.Text}";
 
-					problemBox.Text = $"{GetFact()}"; 
-					return;
+			//расчёт факториала.
+			if (btn.Text == fact)
+			{
+				if (left != null && problemBox.Text != "")
+				{
+					right = num;
+					right = GetAns(prevsn);
 				}
+
+				problemBox.Text = $"{GetFact()}";
+				return;
+			}
+
+			if (problemBox.Text != "") //если окно вывода не пустое
+			{
 
 				//получение числа с окна или ответа.
 				if (left != null && right != null) //если оба числа не null
 				{
-					left = GetAns(); //получение их ответа,
+					left = GetAns(prevsn); //получение их ответа,
 					right = null; //установка для правого числа - null.
 				}
 				else if (left != null && right == null)
 				{
 					right = num; //иначе правое это число с окна.
-					GetAns();
+					left = GetAns(prevsn);
+					right = null;
 				}
-				else if (left == null) left = num; //если левое не null, то левое - число с окна.
+				else if (left == null) left = num; //если левое null, то левое - число с окна.
 
-				//очистка окна от всех нажатий.
-				problemBox.Text = "";
+				
+				prevsn = action; //сохранение этого знака в поле прошлого знака.
+				problemBox.Text = ""; //очистка окна от всех нажатий.
 			}
 		}
 		/// <summary>
@@ -257,14 +292,15 @@ namespace TRIPPLESIX
 		{
 			if (problemBox.Text != "") //если окно не пустое
 			{
-				//если не хватает чисел.
-				if (left == null) left = num; //если нет чисел сохраннёных в полях, то возврат числа с окна. 
-				else if (left != null && right == null) right = num; //если второе число null, то второе число - значение с экрана.
-
+				//если не хватает правого числа.
+				if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
+				//получение ответа.
+				decimal ans = GetAns(action);
 				//вывод ответа в окно.
-				problemBox.Text = $"{GetAns()}"; 
+				labelLastValue.Text = $"{num}";
+				problemBox.Text = $"{ans}"; 
 
-				//очищение значений после вывода.
+				//восстановление значений полей.
 				left = null;
 				right = null;
 			}
@@ -283,31 +319,19 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void NumsBtns(object sender, EventArgs e)
 		{
-			Button sended = sender as Button; //получение нажатой кнопки
-			problemBox.Text += sended.Text; //вывод текста, имеющегося на нажатой кнопке.
-			try { num = decimal.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
-			catch { BackSpace(); } //если не получается это сделать, то удаляется последний выведенный знак.
+			string sended = (sender as Button).Text; //получение нажатой кнопки
+			if (problemBox.Text == "" && sended == ",") problemBox.Text = "0,";
+			problemBox.Text += sended; //вывод текста, имеющегося на нажатой кнопке.
 		}
-
 		/// <summary>
-		/// метод для кнопки (+/-).
+		/// метод устанавливающий в <see langword="private"/> поле <see cref="num"/> число указанное в окне вывода.
 		/// </summary>
-		/// <remarks>
-		/// при нажатии на кнопку, <br/>
-		/// метод превращает выведенный текст на экране в тип децимал, <br/>
-		/// и выводит его обратно на экран с минусом.
-		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Negate(object sender, EventArgs e)
+		private void SetNum(object sender, EventArgs e)
 		{
-			if (problemBox.Text == "") return; //если поле ввода пустое, то выходим из метода.
-			try //попытка перевести выведенный текст в децимал.
-			{
-				num = decimal.Parse(problemBox.Text); //вывод числа в поле.
-				problemBox.Text = $"{-num}"; //получение числа из поля, и вывод на экран с '-'.
-			}
-			catch { MessageBox.Show("ты каким образом смог здесь ошибку вызвать...", "успех!"); }
+			try { num = decimal.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
+			catch { BackSpace(); } //если не получается это сделать, то удаляется последний выведенный знак.
 		}
 
 
@@ -337,18 +361,6 @@ namespace TRIPPLESIX
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
-	}
+
+    }
 }
-///шутка
-///прикол 
-///смешнякава
-///розыгрыш 
-///рофл 
-///антиматериальный конденсатор.
-//MessageBox.Show
-//(
-//	caption: "ты што наделол...",
-//	text: "я тут пытался выполнить то что ты мне накликал, но я получил тысячу букв в лицо, так что мне придётся тебя наказать.\n"
-//	+ "вот они как раз:\n" + ex.ToString()
-//);
-//for (int i = 0; i < 10; i++) Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");

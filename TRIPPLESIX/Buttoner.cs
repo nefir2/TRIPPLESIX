@@ -96,9 +96,9 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// обрабтчик события при нажатии на кнопку не связанную с формами.
 		/// </summary>
-        /// <remarks>
-        /// при нажатии на кнопку откроется ссылка в браузере по умолчанию.
-        /// </remarks>
+		/// <remarks>
+		/// при нажатии на кнопку откроется ссылка в браузере по умолчанию.
+		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void OpenSource(object sender, EventArgs e)
