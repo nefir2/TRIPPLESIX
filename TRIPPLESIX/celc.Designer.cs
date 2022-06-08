@@ -30,53 +30,53 @@ namespace TRIPPLESIX
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(celc));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.equalsbtn = new System.Windows.Forms.Button();
-            this.pointbtn = new System.Windows.Forms.Button();
-            this.plusbtn = new System.Windows.Forms.Button();
-            this.threebtn = new System.Windows.Forms.Button();
-            this.twobtn = new System.Windows.Forms.Button();
-            this.onebtn = new System.Windows.Forms.Button();
-            this.minusbtn = new System.Windows.Forms.Button();
-            this.sixbtn = new System.Windows.Forms.Button();
-            this.fivebtn = new System.Windows.Forms.Button();
-            this.fourbtn = new System.Windows.Forms.Button();
-            this.multiplybtn = new System.Windows.Forms.Button();
-            this.ninebtn = new System.Windows.Forms.Button();
-            this.eightbtn = new System.Windows.Forms.Button();
-            this.sevenbtn = new System.Windows.Forms.Button();
-            this.dividebtn = new System.Windows.Forms.Button();
-            this.powerbtn = new System.Windows.Forms.Button();
-            this.factorialbtn = new System.Windows.Forms.Button();
-            this.modbtn = new System.Windows.Forms.Button();
+            this.btnnegater = new System.Windows.Forms.Button();
+            this.btndel = new System.Windows.Forms.Button();
+            this.btnclr = new System.Windows.Forms.Button();
+            this.btnequals = new System.Windows.Forms.Button();
+            this.btnpoint = new System.Windows.Forms.Button();
+            this.btnplus = new System.Windows.Forms.Button();
+            this.btnthree = new System.Windows.Forms.Button();
+            this.btntwo = new System.Windows.Forms.Button();
+            this.btnone = new System.Windows.Forms.Button();
+            this.btnminus = new System.Windows.Forms.Button();
+            this.btnsix = new System.Windows.Forms.Button();
+            this.btnfive = new System.Windows.Forms.Button();
+            this.btnfour = new System.Windows.Forms.Button();
+            this.btnmultiply = new System.Windows.Forms.Button();
+            this.btnnine = new System.Windows.Forms.Button();
+            this.btneight = new System.Windows.Forms.Button();
+            this.btnseven = new System.Windows.Forms.Button();
+            this.btndivide = new System.Windows.Forms.Button();
+            this.btnpower = new System.Windows.Forms.Button();
+            this.btnfactorial = new System.Windows.Forms.Button();
+            this.btnmod = new System.Windows.Forms.Button();
             this.problemBox = new System.Windows.Forms.TextBox();
-            this.zerobtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnzero = new System.Windows.Forms.Button();
+            this.btnbsp = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnback
             // 
-            this.button1.AccessibleDescription = "";
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(3, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 20);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "к кнопочкам";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Backer);
+            this.btnback.AccessibleDescription = "";
+            this.btnback.BackColor = System.Drawing.Color.Black;
+            this.btnback.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnback.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnback.FlatAppearance.BorderSize = 0;
+            this.btnback.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnback.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnback.Location = new System.Drawing.Point(3, 486);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(81, 20);
+            this.btnback.TabIndex = 20;
+            this.btnback.Text = "к кнопочкам";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.Backer);
             // 
             // tableLayoutPanel1
             // 
@@ -85,31 +85,31 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.equalsbtn, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.pointbtn, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.plusbtn, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.threebtn, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.twobtn, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.onebtn, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.minusbtn, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.sixbtn, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.fivebtn, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.fourbtn, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.multiplybtn, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.ninebtn, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.eightbtn, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.sevenbtn, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dividebtn, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.powerbtn, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.factorialbtn, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.modbtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnnegater, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btndel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnclr, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnequals, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnpoint, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnplus, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnthree, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btntwo, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnone, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnminus, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnsix, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnfive, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnfour, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnmultiply, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnnine, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btneight, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnseven, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btndivide, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnpower, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnfactorial, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnmod, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.problemBox, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.zerobtn, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnback, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnzero, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnbsp, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -125,365 +125,383 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Size = new System.Drawing.Size(349, 509);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // button4
+            // btnnegater
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(90, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(81, 63);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Clear All";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Deleter);
+            this.btnnegater.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnnegater.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnnegater.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnnegater.FlatAppearance.BorderSize = 0;
+            this.btnnegater.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnnegater.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnnegater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnegater.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnnegater.Location = new System.Drawing.Point(3, 417);
+            this.btnnegater.Name = "btnnegater";
+            this.btnnegater.Size = new System.Drawing.Size(81, 63);
+            this.btnnegater.TabIndex = 27;
+            this.btnnegater.Text = "+/-";
+            this.btnnegater.UseVisualStyleBackColor = false;
+            this.btnnegater.Click += new System.EventHandler(this.Negate);
             // 
-            // button5
+            // btndel
             // 
-            this.button5.BackColor = System.Drawing.Color.Silver;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Window;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(177, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 63);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Deleter);
+            this.btndel.BackColor = System.Drawing.Color.White;
+            this.btndel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btndel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndel.FlatAppearance.BorderSize = 0;
+            this.btndel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btndel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btndel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btndel.Location = new System.Drawing.Point(90, 72);
+            this.btndel.Name = "btndel";
+            this.btndel.Size = new System.Drawing.Size(81, 63);
+            this.btndel.TabIndex = 26;
+            this.btndel.Text = "Clear All";
+            this.btndel.UseVisualStyleBackColor = false;
+            this.btndel.Click += new System.EventHandler(this.Deleter);
             // 
-            // equalsbtn
+            // btnclr
             // 
-            this.equalsbtn.BackColor = System.Drawing.Color.Navy;
-            this.equalsbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.equalsbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.equalsbtn.FlatAppearance.BorderSize = 0;
-            this.equalsbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(24)))));
-            this.equalsbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(60)))));
-            this.equalsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.equalsbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.equalsbtn.Location = new System.Drawing.Point(264, 417);
-            this.equalsbtn.Name = "equalsbtn";
-            this.equalsbtn.Size = new System.Drawing.Size(82, 63);
-            this.equalsbtn.TabIndex = 11;
-            this.equalsbtn.Text = "=";
-            this.equalsbtn.UseVisualStyleBackColor = false;
-            this.equalsbtn.Click += new System.EventHandler(this.EqualBtn);
+            this.btnclr.BackColor = System.Drawing.Color.Silver;
+            this.btnclr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnclr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnclr.FlatAppearance.BorderSize = 0;
+            this.btnclr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.btnclr.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Window;
+            this.btnclr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnclr.Location = new System.Drawing.Point(177, 72);
+            this.btnclr.Name = "btnclr";
+            this.btnclr.Size = new System.Drawing.Size(81, 63);
+            this.btnclr.TabIndex = 24;
+            this.btnclr.Text = "Clear";
+            this.btnclr.UseVisualStyleBackColor = false;
+            this.btnclr.Click += new System.EventHandler(this.Deleter);
             // 
-            // pointbtn
+            // btnequals
             // 
-            this.pointbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pointbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pointbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pointbtn.FlatAppearance.BorderSize = 0;
-            this.pointbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.pointbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.pointbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pointbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pointbtn.Location = new System.Drawing.Point(177, 417);
-            this.pointbtn.Name = "pointbtn";
-            this.pointbtn.Size = new System.Drawing.Size(81, 63);
-            this.pointbtn.TabIndex = 10;
-            this.pointbtn.Text = ",";
-            this.pointbtn.UseVisualStyleBackColor = false;
-            this.pointbtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnequals.BackColor = System.Drawing.Color.Navy;
+            this.btnequals.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnequals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnequals.FlatAppearance.BorderSize = 0;
+            this.btnequals.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(24)))));
+            this.btnequals.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(60)))));
+            this.btnequals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnequals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnequals.Location = new System.Drawing.Point(264, 417);
+            this.btnequals.Name = "btnequals";
+            this.btnequals.Size = new System.Drawing.Size(82, 63);
+            this.btnequals.TabIndex = 11;
+            this.btnequals.Text = "=";
+            this.btnequals.UseVisualStyleBackColor = false;
+            this.btnequals.Click += new System.EventHandler(this.EqualBtn);
             // 
-            // plusbtn
+            // btnpoint
             // 
-            this.plusbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.plusbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plusbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.plusbtn.FlatAppearance.BorderSize = 0;
-            this.plusbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.plusbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.plusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plusbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.plusbtn.Location = new System.Drawing.Point(264, 348);
-            this.plusbtn.Name = "plusbtn";
-            this.plusbtn.Size = new System.Drawing.Size(82, 63);
-            this.plusbtn.TabIndex = 12;
-            this.plusbtn.Text = "+";
-            this.plusbtn.UseVisualStyleBackColor = false;
-            this.plusbtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnpoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnpoint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnpoint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnpoint.FlatAppearance.BorderSize = 0;
+            this.btnpoint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnpoint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnpoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnpoint.Location = new System.Drawing.Point(177, 417);
+            this.btnpoint.Name = "btnpoint";
+            this.btnpoint.Size = new System.Drawing.Size(81, 63);
+            this.btnpoint.TabIndex = 10;
+            this.btnpoint.Text = ",";
+            this.btnpoint.UseVisualStyleBackColor = false;
+            this.btnpoint.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // threebtn
+            // btnplus
             // 
-            this.threebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.threebtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.threebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.threebtn.FlatAppearance.BorderSize = 0;
-            this.threebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.threebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.threebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.threebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.threebtn.Location = new System.Drawing.Point(177, 348);
-            this.threebtn.Name = "threebtn";
-            this.threebtn.Size = new System.Drawing.Size(81, 63);
-            this.threebtn.TabIndex = 3;
-            this.threebtn.Text = "3";
-            this.threebtn.UseVisualStyleBackColor = false;
-            this.threebtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnplus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnplus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnplus.FlatAppearance.BorderSize = 0;
+            this.btnplus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnplus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnplus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnplus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnplus.Location = new System.Drawing.Point(264, 348);
+            this.btnplus.Name = "btnplus";
+            this.btnplus.Size = new System.Drawing.Size(82, 63);
+            this.btnplus.TabIndex = 12;
+            this.btnplus.Text = "+";
+            this.btnplus.UseVisualStyleBackColor = false;
+            this.btnplus.Click += new System.EventHandler(this.ActionBtns);
             // 
-            // twobtn
+            // btnthree
             // 
-            this.twobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.twobtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.twobtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.twobtn.FlatAppearance.BorderSize = 0;
-            this.twobtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.twobtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.twobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.twobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.twobtn.Location = new System.Drawing.Point(90, 348);
-            this.twobtn.Name = "twobtn";
-            this.twobtn.Size = new System.Drawing.Size(81, 63);
-            this.twobtn.TabIndex = 2;
-            this.twobtn.Text = "2";
-            this.twobtn.UseVisualStyleBackColor = false;
-            this.twobtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnthree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnthree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnthree.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnthree.FlatAppearance.BorderSize = 0;
+            this.btnthree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnthree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnthree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnthree.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnthree.Location = new System.Drawing.Point(177, 348);
+            this.btnthree.Name = "btnthree";
+            this.btnthree.Size = new System.Drawing.Size(81, 63);
+            this.btnthree.TabIndex = 3;
+            this.btnthree.Text = "3";
+            this.btnthree.UseVisualStyleBackColor = false;
+            this.btnthree.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // onebtn
+            // btntwo
             // 
-            this.onebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.onebtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.onebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.onebtn.FlatAppearance.BorderSize = 0;
-            this.onebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.onebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.onebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.onebtn.Location = new System.Drawing.Point(3, 348);
-            this.onebtn.Name = "onebtn";
-            this.onebtn.Size = new System.Drawing.Size(81, 63);
-            this.onebtn.TabIndex = 1;
-            this.onebtn.Text = "1";
-            this.onebtn.UseVisualStyleBackColor = false;
-            this.onebtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btntwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btntwo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btntwo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btntwo.FlatAppearance.BorderSize = 0;
+            this.btntwo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btntwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btntwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btntwo.Location = new System.Drawing.Point(90, 348);
+            this.btntwo.Name = "btntwo";
+            this.btntwo.Size = new System.Drawing.Size(81, 63);
+            this.btntwo.TabIndex = 2;
+            this.btntwo.Text = "2";
+            this.btntwo.UseVisualStyleBackColor = false;
+            this.btntwo.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // minusbtn
+            // btnone
             // 
-            this.minusbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.minusbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minusbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.minusbtn.FlatAppearance.BorderSize = 0;
-            this.minusbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.minusbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.minusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minusbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minusbtn.Location = new System.Drawing.Point(264, 279);
-            this.minusbtn.Name = "minusbtn";
-            this.minusbtn.Size = new System.Drawing.Size(82, 63);
-            this.minusbtn.TabIndex = 13;
-            this.minusbtn.Text = "-";
-            this.minusbtn.UseVisualStyleBackColor = false;
-            this.minusbtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnone.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnone.FlatAppearance.BorderSize = 0;
+            this.btnone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnone.Location = new System.Drawing.Point(3, 348);
+            this.btnone.Name = "btnone";
+            this.btnone.Size = new System.Drawing.Size(81, 63);
+            this.btnone.TabIndex = 1;
+            this.btnone.Text = "1";
+            this.btnone.UseVisualStyleBackColor = false;
+            this.btnone.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // sixbtn
+            // btnminus
             // 
-            this.sixbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sixbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sixbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sixbtn.FlatAppearance.BorderSize = 0;
-            this.sixbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.sixbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.sixbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sixbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sixbtn.Location = new System.Drawing.Point(177, 279);
-            this.sixbtn.Name = "sixbtn";
-            this.sixbtn.Size = new System.Drawing.Size(81, 63);
-            this.sixbtn.TabIndex = 6;
-            this.sixbtn.Text = "6";
-            this.sixbtn.UseVisualStyleBackColor = false;
-            this.sixbtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnminus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnminus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnminus.FlatAppearance.BorderSize = 0;
+            this.btnminus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnminus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnminus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnminus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnminus.Location = new System.Drawing.Point(264, 279);
+            this.btnminus.Name = "btnminus";
+            this.btnminus.Size = new System.Drawing.Size(82, 63);
+            this.btnminus.TabIndex = 13;
+            this.btnminus.Text = "-";
+            this.btnminus.UseVisualStyleBackColor = false;
+            this.btnminus.Click += new System.EventHandler(this.ActionBtns);
             // 
-            // fivebtn
+            // btnsix
             // 
-            this.fivebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.fivebtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fivebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.fivebtn.FlatAppearance.BorderSize = 0;
-            this.fivebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.fivebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.fivebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fivebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fivebtn.Location = new System.Drawing.Point(90, 279);
-            this.fivebtn.Name = "fivebtn";
-            this.fivebtn.Size = new System.Drawing.Size(81, 63);
-            this.fivebtn.TabIndex = 5;
-            this.fivebtn.Text = "5";
-            this.fivebtn.UseVisualStyleBackColor = false;
-            this.fivebtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnsix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnsix.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnsix.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnsix.FlatAppearance.BorderSize = 0;
+            this.btnsix.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnsix.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnsix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsix.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnsix.Location = new System.Drawing.Point(177, 279);
+            this.btnsix.Name = "btnsix";
+            this.btnsix.Size = new System.Drawing.Size(81, 63);
+            this.btnsix.TabIndex = 6;
+            this.btnsix.Text = "6";
+            this.btnsix.UseVisualStyleBackColor = false;
+            this.btnsix.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // fourbtn
+            // btnfive
             // 
-            this.fourbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.fourbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fourbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.fourbtn.FlatAppearance.BorderSize = 0;
-            this.fourbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.fourbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.fourbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fourbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fourbtn.Location = new System.Drawing.Point(3, 279);
-            this.fourbtn.Name = "fourbtn";
-            this.fourbtn.Size = new System.Drawing.Size(81, 63);
-            this.fourbtn.TabIndex = 4;
-            this.fourbtn.Text = "4";
-            this.fourbtn.UseVisualStyleBackColor = false;
-            this.fourbtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnfive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnfive.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfive.FlatAppearance.BorderSize = 0;
+            this.btnfive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnfive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnfive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnfive.Location = new System.Drawing.Point(90, 279);
+            this.btnfive.Name = "btnfive";
+            this.btnfive.Size = new System.Drawing.Size(81, 63);
+            this.btnfive.TabIndex = 5;
+            this.btnfive.Text = "5";
+            this.btnfive.UseVisualStyleBackColor = false;
+            this.btnfive.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // multiplybtn
+            // btnfour
             // 
-            this.multiplybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.multiplybtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.multiplybtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.multiplybtn.FlatAppearance.BorderSize = 0;
-            this.multiplybtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.multiplybtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.multiplybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.multiplybtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.multiplybtn.Location = new System.Drawing.Point(264, 210);
-            this.multiplybtn.Name = "multiplybtn";
-            this.multiplybtn.Size = new System.Drawing.Size(82, 63);
-            this.multiplybtn.TabIndex = 14;
-            this.multiplybtn.Text = "×";
-            this.multiplybtn.UseVisualStyleBackColor = false;
-            this.multiplybtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnfour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfour.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnfour.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfour.FlatAppearance.BorderSize = 0;
+            this.btnfour.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnfour.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnfour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnfour.Location = new System.Drawing.Point(3, 279);
+            this.btnfour.Name = "btnfour";
+            this.btnfour.Size = new System.Drawing.Size(81, 63);
+            this.btnfour.TabIndex = 4;
+            this.btnfour.Text = "4";
+            this.btnfour.UseVisualStyleBackColor = false;
+            this.btnfour.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // ninebtn
+            // btnmultiply
             // 
-            this.ninebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ninebtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ninebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ninebtn.FlatAppearance.BorderSize = 0;
-            this.ninebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.ninebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ninebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ninebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ninebtn.Location = new System.Drawing.Point(177, 210);
-            this.ninebtn.Name = "ninebtn";
-            this.ninebtn.Size = new System.Drawing.Size(81, 63);
-            this.ninebtn.TabIndex = 9;
-            this.ninebtn.Text = "9";
-            this.ninebtn.UseVisualStyleBackColor = false;
-            this.ninebtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnmultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnmultiply.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnmultiply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnmultiply.FlatAppearance.BorderSize = 0;
+            this.btnmultiply.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnmultiply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnmultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnmultiply.Location = new System.Drawing.Point(264, 210);
+            this.btnmultiply.Name = "btnmultiply";
+            this.btnmultiply.Size = new System.Drawing.Size(82, 63);
+            this.btnmultiply.TabIndex = 14;
+            this.btnmultiply.Text = "×";
+            this.btnmultiply.UseVisualStyleBackColor = false;
+            this.btnmultiply.Click += new System.EventHandler(this.ActionBtns);
             // 
-            // eightbtn
+            // btnnine
             // 
-            this.eightbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.eightbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eightbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.eightbtn.FlatAppearance.BorderSize = 0;
-            this.eightbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.eightbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.eightbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eightbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.eightbtn.Location = new System.Drawing.Point(90, 210);
-            this.eightbtn.Name = "eightbtn";
-            this.eightbtn.Size = new System.Drawing.Size(81, 63);
-            this.eightbtn.TabIndex = 8;
-            this.eightbtn.Text = "8";
-            this.eightbtn.UseVisualStyleBackColor = false;
-            this.eightbtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnnine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnnine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnnine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnnine.FlatAppearance.BorderSize = 0;
+            this.btnnine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnnine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnnine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnine.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnnine.Location = new System.Drawing.Point(177, 210);
+            this.btnnine.Name = "btnnine";
+            this.btnnine.Size = new System.Drawing.Size(81, 63);
+            this.btnnine.TabIndex = 9;
+            this.btnnine.Text = "9";
+            this.btnnine.UseVisualStyleBackColor = false;
+            this.btnnine.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // sevenbtn
+            // btneight
             // 
-            this.sevenbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sevenbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sevenbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sevenbtn.FlatAppearance.BorderSize = 0;
-            this.sevenbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.sevenbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.sevenbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sevenbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sevenbtn.Location = new System.Drawing.Point(3, 210);
-            this.sevenbtn.Name = "sevenbtn";
-            this.sevenbtn.Size = new System.Drawing.Size(81, 63);
-            this.sevenbtn.TabIndex = 7;
-            this.sevenbtn.Text = "7";
-            this.sevenbtn.UseVisualStyleBackColor = false;
-            this.sevenbtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btneight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btneight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btneight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btneight.FlatAppearance.BorderSize = 0;
+            this.btneight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btneight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btneight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btneight.Location = new System.Drawing.Point(90, 210);
+            this.btneight.Name = "btneight";
+            this.btneight.Size = new System.Drawing.Size(81, 63);
+            this.btneight.TabIndex = 8;
+            this.btneight.Text = "8";
+            this.btneight.UseVisualStyleBackColor = false;
+            this.btneight.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // dividebtn
+            // btnseven
             // 
-            this.dividebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dividebtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dividebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dividebtn.FlatAppearance.BorderSize = 0;
-            this.dividebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.dividebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.dividebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dividebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dividebtn.Location = new System.Drawing.Point(264, 141);
-            this.dividebtn.Name = "dividebtn";
-            this.dividebtn.Size = new System.Drawing.Size(82, 63);
-            this.dividebtn.TabIndex = 15;
-            this.dividebtn.Text = "÷";
-            this.dividebtn.UseVisualStyleBackColor = false;
-            this.dividebtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnseven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnseven.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnseven.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnseven.FlatAppearance.BorderSize = 0;
+            this.btnseven.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnseven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnseven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnseven.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnseven.Location = new System.Drawing.Point(3, 210);
+            this.btnseven.Name = "btnseven";
+            this.btnseven.Size = new System.Drawing.Size(81, 63);
+            this.btnseven.TabIndex = 7;
+            this.btnseven.Text = "7";
+            this.btnseven.UseVisualStyleBackColor = false;
+            this.btnseven.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // powerbtn
+            // btndivide
             // 
-            this.powerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.powerbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.powerbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.powerbtn.FlatAppearance.BorderSize = 0;
-            this.powerbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.powerbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.powerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.powerbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.powerbtn.Location = new System.Drawing.Point(177, 141);
-            this.powerbtn.Name = "powerbtn";
-            this.powerbtn.Size = new System.Drawing.Size(81, 63);
-            this.powerbtn.TabIndex = 16;
-            this.powerbtn.Text = "^";
-            this.powerbtn.UseVisualStyleBackColor = false;
-            this.powerbtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btndivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndivide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btndivide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndivide.FlatAppearance.BorderSize = 0;
+            this.btndivide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btndivide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btndivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btndivide.Location = new System.Drawing.Point(264, 141);
+            this.btndivide.Name = "btndivide";
+            this.btndivide.Size = new System.Drawing.Size(82, 63);
+            this.btndivide.TabIndex = 15;
+            this.btndivide.Text = "÷";
+            this.btndivide.UseVisualStyleBackColor = false;
+            this.btndivide.Click += new System.EventHandler(this.ActionBtns);
             // 
-            // factorialbtn
+            // btnpower
             // 
-            this.factorialbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.factorialbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.factorialbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.factorialbtn.FlatAppearance.BorderSize = 0;
-            this.factorialbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.factorialbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.factorialbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.factorialbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.factorialbtn.Location = new System.Drawing.Point(90, 141);
-            this.factorialbtn.Name = "factorialbtn";
-            this.factorialbtn.Size = new System.Drawing.Size(81, 63);
-            this.factorialbtn.TabIndex = 17;
-            this.factorialbtn.Text = "!";
-            this.factorialbtn.UseVisualStyleBackColor = false;
-            this.factorialbtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnpower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnpower.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnpower.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnpower.FlatAppearance.BorderSize = 0;
+            this.btnpower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnpower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnpower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpower.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnpower.Location = new System.Drawing.Point(177, 141);
+            this.btnpower.Name = "btnpower";
+            this.btnpower.Size = new System.Drawing.Size(81, 63);
+            this.btnpower.TabIndex = 16;
+            this.btnpower.Text = "^";
+            this.btnpower.UseVisualStyleBackColor = false;
+            this.btnpower.Click += new System.EventHandler(this.ActionBtns);
             // 
-            // modbtn
+            // btnfactorial
             // 
-            this.modbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.modbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.modbtn.FlatAppearance.BorderSize = 0;
-            this.modbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.modbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.modbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.modbtn.Location = new System.Drawing.Point(3, 141);
-            this.modbtn.Name = "modbtn";
-            this.modbtn.Size = new System.Drawing.Size(81, 63);
-            this.modbtn.TabIndex = 18;
-            this.modbtn.Text = "mod";
-            this.modbtn.UseVisualStyleBackColor = false;
-            this.modbtn.Click += new System.EventHandler(this.ActionBtns);
+            this.btnfactorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfactorial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnfactorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnfactorial.FlatAppearance.BorderSize = 0;
+            this.btnfactorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnfactorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnfactorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfactorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnfactorial.Location = new System.Drawing.Point(90, 141);
+            this.btnfactorial.Name = "btnfactorial";
+            this.btnfactorial.Size = new System.Drawing.Size(81, 63);
+            this.btnfactorial.TabIndex = 17;
+            this.btnfactorial.Text = "!";
+            this.btnfactorial.UseVisualStyleBackColor = false;
+            this.btnfactorial.Click += new System.EventHandler(this.ActionBtns);
+            // 
+            // btnmod
+            // 
+            this.btnmod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnmod.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnmod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnmod.FlatAppearance.BorderSize = 0;
+            this.btnmod.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnmod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnmod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnmod.Location = new System.Drawing.Point(3, 141);
+            this.btnmod.Name = "btnmod";
+            this.btnmod.Size = new System.Drawing.Size(81, 63);
+            this.btnmod.TabIndex = 18;
+            this.btnmod.Text = "mod";
+            this.btnmod.UseVisualStyleBackColor = false;
+            this.btnmod.Click += new System.EventHandler(this.ActionBtns);
             // 
             // problemBox
             // 
@@ -500,57 +518,39 @@ namespace TRIPPLESIX
             this.problemBox.Size = new System.Drawing.Size(343, 63);
             this.problemBox.TabIndex = 19;
             // 
-            // zerobtn
+            // btnzero
             // 
-            this.zerobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.zerobtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zerobtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.zerobtn.FlatAppearance.BorderSize = 0;
-            this.zerobtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.zerobtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.zerobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.zerobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.zerobtn.Location = new System.Drawing.Point(90, 417);
-            this.zerobtn.Name = "zerobtn";
-            this.zerobtn.Size = new System.Drawing.Size(81, 63);
-            this.zerobtn.TabIndex = 0;
-            this.zerobtn.Text = "0";
-            this.zerobtn.UseVisualStyleBackColor = false;
-            this.zerobtn.Click += new System.EventHandler(this.NumsBtns);
+            this.btnzero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnzero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnzero.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnzero.FlatAppearance.BorderSize = 0;
+            this.btnzero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnzero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnzero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnzero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnzero.Location = new System.Drawing.Point(90, 417);
+            this.btnzero.Name = "btnzero";
+            this.btnzero.Size = new System.Drawing.Size(81, 63);
+            this.btnzero.TabIndex = 0;
+            this.btnzero.Text = "0";
+            this.btnzero.UseVisualStyleBackColor = false;
+            this.btnzero.Click += new System.EventHandler(this.NumsBtns);
             // 
-            // button2
+            // btnbsp
             // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(264, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 63);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "←";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Deleter);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(3, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 63);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "+/-";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Negate);
+            this.btnbsp.BackColor = System.Drawing.Color.Maroon;
+            this.btnbsp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnbsp.FlatAppearance.BorderSize = 0;
+            this.btnbsp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnbsp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnbsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbsp.Location = new System.Drawing.Point(264, 72);
+            this.btnbsp.Name = "btnbsp";
+            this.btnbsp.Size = new System.Drawing.Size(82, 63);
+            this.btnbsp.TabIndex = 21;
+            this.btnbsp.Text = "←";
+            this.btnbsp.UseVisualStyleBackColor = false;
+            this.btnbsp.Click += new System.EventHandler(this.Deleter);
             // 
             // celc
             // 
@@ -574,31 +574,31 @@ namespace TRIPPLESIX
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox problemBox;
-        private System.Windows.Forms.Button equalsbtn;
-        private System.Windows.Forms.Button pointbtn;
-        private System.Windows.Forms.Button plusbtn;
-        private System.Windows.Forms.Button threebtn;
-        private System.Windows.Forms.Button twobtn;
-        private System.Windows.Forms.Button onebtn;
-        private System.Windows.Forms.Button minusbtn;
-        private System.Windows.Forms.Button sixbtn;
-        private System.Windows.Forms.Button fivebtn;
-        private System.Windows.Forms.Button fourbtn;
-        private System.Windows.Forms.Button multiplybtn;
-        private System.Windows.Forms.Button ninebtn;
-        private System.Windows.Forms.Button eightbtn;
-        private System.Windows.Forms.Button sevenbtn;
-        private System.Windows.Forms.Button dividebtn;
-        private System.Windows.Forms.Button powerbtn;
-        private System.Windows.Forms.Button factorialbtn;
-        private System.Windows.Forms.Button modbtn;
-        private System.Windows.Forms.Button zerobtn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnequals;
+        private System.Windows.Forms.Button btnpoint;
+        private System.Windows.Forms.Button btnplus;
+        private System.Windows.Forms.Button btnthree;
+        private System.Windows.Forms.Button btntwo;
+        private System.Windows.Forms.Button btnone;
+        private System.Windows.Forms.Button btnminus;
+        private System.Windows.Forms.Button btnsix;
+        private System.Windows.Forms.Button btnfive;
+        private System.Windows.Forms.Button btnfour;
+        private System.Windows.Forms.Button btnmultiply;
+        private System.Windows.Forms.Button btnnine;
+        private System.Windows.Forms.Button btneight;
+        private System.Windows.Forms.Button btnseven;
+        private System.Windows.Forms.Button btndivide;
+        private System.Windows.Forms.Button btnpower;
+        private System.Windows.Forms.Button btnfactorial;
+        private System.Windows.Forms.Button btnmod;
+        private System.Windows.Forms.Button btnzero;
+        private System.Windows.Forms.Button btnclr;
+        private System.Windows.Forms.Button btnbsp;
+        private System.Windows.Forms.Button btndel;
+        private System.Windows.Forms.Button btnnegater;
     }
 }

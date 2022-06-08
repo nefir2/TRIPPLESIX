@@ -36,8 +36,7 @@ namespace TRIPPLESIX
 		/// </summary>
 		github f6 = new github();
 
-		//методы
-
+		
 		//		обработчики событий.
 		/// <summary>
 		/// обработчик события нажатия на кнопке Form2.
