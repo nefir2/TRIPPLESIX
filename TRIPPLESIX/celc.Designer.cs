@@ -55,6 +55,7 @@ namespace TRIPPLESIX
             this.problemBox = new System.Windows.Forms.TextBox();
             this.zerobtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.button4, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.equalsbtn, 3, 6);
@@ -106,7 +108,7 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Controls.Add(this.modbtn, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.problemBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.zerobtn, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.zerobtn, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.button2, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -193,7 +195,7 @@ namespace TRIPPLESIX
             this.pointbtn.TabIndex = 10;
             this.pointbtn.Text = ",";
             this.pointbtn.UseVisualStyleBackColor = false;
-            this.pointbtn.Click += new System.EventHandler(this.PointBtn);
+            this.pointbtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // plusbtn
             // 
@@ -501,7 +503,6 @@ namespace TRIPPLESIX
             // zerobtn
             // 
             this.zerobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.zerobtn, 2);
             this.zerobtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.zerobtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.zerobtn.FlatAppearance.BorderSize = 0;
@@ -509,9 +510,9 @@ namespace TRIPPLESIX
             this.zerobtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.zerobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.zerobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.zerobtn.Location = new System.Drawing.Point(3, 417);
+            this.zerobtn.Location = new System.Drawing.Point(90, 417);
             this.zerobtn.Name = "zerobtn";
-            this.zerobtn.Size = new System.Drawing.Size(168, 63);
+            this.zerobtn.Size = new System.Drawing.Size(81, 63);
             this.zerobtn.TabIndex = 0;
             this.zerobtn.Text = "0";
             this.zerobtn.UseVisualStyleBackColor = false;
@@ -532,6 +533,24 @@ namespace TRIPPLESIX
             this.button2.Text = "←";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Deleter);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(3, 417);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 63);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "+/-";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Negate);
             // 
             // celc
             // 
@@ -580,5 +599,6 @@ namespace TRIPPLESIX
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -39,9 +39,6 @@ namespace TRIPPLESIX
 		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Closer(object sender, FormClosingEventArgs e)
-		{
-			Application.Exit();
-		}
+		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
 	}
 }

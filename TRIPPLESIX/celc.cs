@@ -19,37 +19,25 @@ namespace TRIPPLESIX
 		public celc()
 		{
 			InitializeComponent();
+			UseDefault();
 		}
 
 		//поля
 		/// <summary>
-		/// левое число.
+		/// поле, где хранится вводимое число.
 		/// </summary>
-		decimal left = 0;
-		/// <summary>
-		/// правое число.
-		/// </summary>
-		decimal right = 0;
-		/// <summary>
-		/// знак.
-		/// </summary>
-		char sign = '+';
-		/// <summary>
-		/// поле с информацией о кнопке.
-		/// </summary>
-		Button who = null;
-		/// <summary>
-		/// поле с информацией о том, был ли добавлен знак в выражении.
-		/// </summary>
-		bool isHaveSign = false;
-		/// <summary>
-		/// поле, где хранится информация о том, выведен ли ответ в окно.
-		/// </summary>
-		bool haveAns = false;
+		decimal num;
 
 
 
 		//методы
+		/// <summary>
+		/// метод для восстановления к значениям полей по умолчанию.
+		/// </summary>
+		private void UseDefault()
+        {
+			num = 0;
+		}
 		/// <summary>
 		/// метод возвращающий факториал числа.
 		/// </summary>
@@ -90,88 +78,34 @@ namespace TRIPPLESIX
 			return ans; //возврат числа если всё прошло успешно.
 		}
 		/// <summary>
-		/// метод для вывода в окно нажимаемых кнопок или других возвращаемых значений.
-		/// </summary>
-		private void problemBoxInsert()
-		{
-			switch (who.Text) //текст нажатой кнопки.
-			{
-				case "0": //если нажата цифра, то
-				case "1":
-				case "2":
-				case "3":
-				case "4":
-				case "5":
-				case "6":
-				case "7":
-				case "8":
-				case "9":
-					problemBox.Text += who.Text; //вывод на экран этой цифры.
-					break;
-				case "!": //если нажат знак факториала
-					if (problemBox.Text.Length != 0)
-					{ //и если в окне есть хотя бы что-то, то
-						left = decimal.Parse(problemBox.Text); //парс чисел с окна в переменную
-						decimal fact = Factorial(left);
-						if (fact == -1)
-						{
-							problemBox.Text = "";
-						}
-						else
-						{
-							problemBox.Text = $"{fact}"; //пересчёт и вывод этого числа.
-						}
-						haveAns = true;
-					}
-					break;
-				case "mod":
-					right = 1;
-					inpAns(left % right);
-					break;
-				case "^":
-					decimal pow = Power(left, right);
-					if (pow == -1) problemBox.Text = "";
-					else inpAns(pow);
-					break;
-
-				default:
-					break;
-			}
-		}
-		/// <summary>
-		/// метод для вывода ответа в окно.
-		/// </summary>
-		/// <param name="ans"></param>
-		private void inpAns(decimal ans)
-		{
-			if (!isHaveSign)
-			{
-				if (problemBox.Text != "")
-				{
-					left = decimal.Parse(problemBox.Text);
-					problemBox.Text = "";
-					isHaveSign = true;
-				}
-			}
-			else
-			{
-				right = decimal.Parse(problemBox.Text);
-				haveAns = true;
-				problemBox.Text = $"{ans}";
-				isHaveSign = false;
-			}
-		}
-		/// <summary>
 		/// удаление последнего введённого значения.
 		/// </summary>
 		private void BackSpace()
 		{
-			if (problemBox.Text.Length > 0) //в окне сначала что-то должно быть, чтобы можно было это стереть.
+			StringBuilder x = new StringBuilder("");
+			try
 			{
-				StringBuilder x = new StringBuilder(problemBox.Text); //получение строки из окна типа StringBuilder
-				x.Remove(x.Length - 1, 1); //удаление последнего знака
-				problemBox.Text = x.ToString(); //возврат строки обратно в окно.
+				if (problemBox.Text.Length > 0) //в окне сначала что-то должно быть, чтобы можно было это стереть.
+				{
+					x = new StringBuilder(problemBox.Text); //получение строки из окна типа StringBuilder
+					x.Remove(x.Length - 1, 1); //удаление последнего знака
+					problemBox.Text = x.ToString(); //возврат строки обратно в окно.
+					num = decimal.Parse(x.ToString()); //сохранение в поле полученного значения.
+				}
 			}
+            catch (FormatException)
+            {
+				if (x.Length != 0) throw;
+				num = 0;
+            }
+			catch (Exception x) //??????
+            {
+				MessageBox.Show
+					(
+					caption: "ну и ну",
+					text: "ты каким образом смог получить здесь эксепшн?\n" + x
+					);
+            }
 		}
 		//обработчики событий.
 		/// <summary>
@@ -183,31 +117,17 @@ namespace TRIPPLESIX
 		/// </remarks>
 		/// <param name="sender">отправитель события (кто именно нажал на кнопку).</param>
 		/// <param name="e"></param>
-		private void BtnsClick(object sender, EventArgs e)
-		{
-			who = sender as Button; //распаковка отправителя в класс Button.
-			
-			if (haveAns) //если в окне есть ответ, при нажатии любой другой клавиши:
-			{ 				
-				if (problemBox.Text != "") left = decimal.Parse(problemBox.Text); //ответ запоминается как левое число,
-				problemBox.Text = ""; //ответ в окне стирается.
-				haveAns = false;
-			}
-			problemBoxInsert(); //вывод нажимаемых кнопок в окно.
-		}
 		private void Deleter(object sender, EventArgs e)
 		{
 			Button sended = sender as Button;
-			if (sended.Text == "Clear") problemBox.Text = ""; //если нажатая кнопка Clear, то очищается окно.
+			if (sended.Text == "Clear")
+			{
+				problemBox.Text = ""; //если нажатая кнопка Clear, то очищается окно.
+				num = 0; //очистка поля от чисел.
+			}
 			else if (sended.Text == "Clear All") //если нажата кнопка Clear All,
-			{                                 //то очищаются все поля и окно.
-				left = 0;
-				right = 0;
-				sign = '+';
-				who = null;
-				isHaveSign = false;
-				haveAns = false;
-				problemBox.Text = "";
+			{                                   //то очищаются все поля и окно.
+				UseDefault();
 				return;
 			}
 			else if (sended.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число. //⌫
@@ -222,15 +142,38 @@ namespace TRIPPLESIX
 
 		}
 
+		/// <summary>
+		/// обработчик события нажатия на кнопку с цифрой или запятой.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void NumsBtns(object sender, EventArgs e)
 		{
-			Button sended = sender as Button;
-			problemBox.Text += sended.Text;
+			Button sended = sender as Button; //получение нажатой кнопки
+			problemBox.Text += sended.Text; //вывод текста, имеющегося на нажатой кнопке.
+			try { num = decimal.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
+            catch { BackSpace(); } //если не получается это сделать, то удаляется последний выведенный знак.
 		}
 
-		private void PointBtn(object sender, EventArgs e)
+		/// <summary>
+		/// метод для кнопки (+/-).
+		/// </summary>
+		/// <remarks>
+		/// при нажатии на кнопку, <br/>
+		/// метод превращает выведенный текст на экране в тип децимал, <br/>
+		/// и выводит его обратно на экран с минусом.
+		/// </remarks>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Negate(object sender, EventArgs e)
 		{
-
+			if (problemBox.Text == "") return; //если поле ввода пустое, то выходим из метода.
+            try //попытка перевести выведенный текст в децимал.
+            {
+				num = decimal.Parse(problemBox.Text); //вывод числа в поле.
+				problemBox.Text = $"{-num}"; //получение числа из поля, и вывод на экран с '-'.
+            }
+            catch { MessageBox.Show("ты каким образом смог здесь ошибку вызвать...", "успех!"); }
 		}
 
 
@@ -260,11 +203,8 @@ namespace TRIPPLESIX
 		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Closer(object sender, FormClosingEventArgs e)
-		{
-			Application.Exit();
-		}
-    }
+		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
+	}
 }
 //MessageBox.Show
 //(
