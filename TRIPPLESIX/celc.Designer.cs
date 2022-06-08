@@ -139,7 +139,7 @@ namespace TRIPPLESIX
             this.button4.TabIndex = 26;
             this.button4.Text = "Clear All";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.BtnsClick);
+            this.button4.Click += new System.EventHandler(this.Deleter);
             // 
             // button5
             // 
@@ -157,7 +157,7 @@ namespace TRIPPLESIX
             this.button5.TabIndex = 24;
             this.button5.Text = "Clear";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.BtnsClick);
+            this.button5.Click += new System.EventHandler(this.Deleter);
             // 
             // equalsbtn
             // 
@@ -175,7 +175,7 @@ namespace TRIPPLESIX
             this.equalsbtn.TabIndex = 11;
             this.equalsbtn.Text = "=";
             this.equalsbtn.UseVisualStyleBackColor = false;
-            this.equalsbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.equalsbtn.Click += new System.EventHandler(this.EqualBtn);
             // 
             // pointbtn
             // 
@@ -193,7 +193,7 @@ namespace TRIPPLESIX
             this.pointbtn.TabIndex = 10;
             this.pointbtn.Text = ",";
             this.pointbtn.UseVisualStyleBackColor = false;
-            this.pointbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.pointbtn.Click += new System.EventHandler(this.PointBtn);
             // 
             // plusbtn
             // 
@@ -211,7 +211,7 @@ namespace TRIPPLESIX
             this.plusbtn.TabIndex = 12;
             this.plusbtn.Text = "+";
             this.plusbtn.UseVisualStyleBackColor = false;
-            this.plusbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.plusbtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // threebtn
             // 
@@ -229,7 +229,7 @@ namespace TRIPPLESIX
             this.threebtn.TabIndex = 3;
             this.threebtn.Text = "3";
             this.threebtn.UseVisualStyleBackColor = false;
-            this.threebtn.Click += new System.EventHandler(this.BtnsClick);
+            this.threebtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // twobtn
             // 
@@ -247,7 +247,7 @@ namespace TRIPPLESIX
             this.twobtn.TabIndex = 2;
             this.twobtn.Text = "2";
             this.twobtn.UseVisualStyleBackColor = false;
-            this.twobtn.Click += new System.EventHandler(this.BtnsClick);
+            this.twobtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // onebtn
             // 
@@ -265,7 +265,7 @@ namespace TRIPPLESIX
             this.onebtn.TabIndex = 1;
             this.onebtn.Text = "1";
             this.onebtn.UseVisualStyleBackColor = false;
-            this.onebtn.Click += new System.EventHandler(this.BtnsClick);
+            this.onebtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // minusbtn
             // 
@@ -283,7 +283,7 @@ namespace TRIPPLESIX
             this.minusbtn.TabIndex = 13;
             this.minusbtn.Text = "-";
             this.minusbtn.UseVisualStyleBackColor = false;
-            this.minusbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.minusbtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // sixbtn
             // 
@@ -301,7 +301,7 @@ namespace TRIPPLESIX
             this.sixbtn.TabIndex = 6;
             this.sixbtn.Text = "6";
             this.sixbtn.UseVisualStyleBackColor = false;
-            this.sixbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.sixbtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // fivebtn
             // 
@@ -319,7 +319,7 @@ namespace TRIPPLESIX
             this.fivebtn.TabIndex = 5;
             this.fivebtn.Text = "5";
             this.fivebtn.UseVisualStyleBackColor = false;
-            this.fivebtn.Click += new System.EventHandler(this.BtnsClick);
+            this.fivebtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // fourbtn
             // 
@@ -337,7 +337,7 @@ namespace TRIPPLESIX
             this.fourbtn.TabIndex = 4;
             this.fourbtn.Text = "4";
             this.fourbtn.UseVisualStyleBackColor = false;
-            this.fourbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.fourbtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // multiplybtn
             // 
@@ -355,7 +355,7 @@ namespace TRIPPLESIX
             this.multiplybtn.TabIndex = 14;
             this.multiplybtn.Text = "×";
             this.multiplybtn.UseVisualStyleBackColor = false;
-            this.multiplybtn.Click += new System.EventHandler(this.BtnsClick);
+            this.multiplybtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // ninebtn
             // 
@@ -373,7 +373,7 @@ namespace TRIPPLESIX
             this.ninebtn.TabIndex = 9;
             this.ninebtn.Text = "9";
             this.ninebtn.UseVisualStyleBackColor = false;
-            this.ninebtn.Click += new System.EventHandler(this.BtnsClick);
+            this.ninebtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // eightbtn
             // 
@@ -391,7 +391,7 @@ namespace TRIPPLESIX
             this.eightbtn.TabIndex = 8;
             this.eightbtn.Text = "8";
             this.eightbtn.UseVisualStyleBackColor = false;
-            this.eightbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.eightbtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // sevenbtn
             // 
@@ -409,7 +409,7 @@ namespace TRIPPLESIX
             this.sevenbtn.TabIndex = 7;
             this.sevenbtn.Text = "7";
             this.sevenbtn.UseVisualStyleBackColor = false;
-            this.sevenbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.sevenbtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // dividebtn
             // 
@@ -427,7 +427,7 @@ namespace TRIPPLESIX
             this.dividebtn.TabIndex = 15;
             this.dividebtn.Text = "÷";
             this.dividebtn.UseVisualStyleBackColor = false;
-            this.dividebtn.Click += new System.EventHandler(this.BtnsClick);
+            this.dividebtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // powerbtn
             // 
@@ -445,7 +445,7 @@ namespace TRIPPLESIX
             this.powerbtn.TabIndex = 16;
             this.powerbtn.Text = "^";
             this.powerbtn.UseVisualStyleBackColor = false;
-            this.powerbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.powerbtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // factorialbtn
             // 
@@ -463,7 +463,7 @@ namespace TRIPPLESIX
             this.factorialbtn.TabIndex = 17;
             this.factorialbtn.Text = "!";
             this.factorialbtn.UseVisualStyleBackColor = false;
-            this.factorialbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.factorialbtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // modbtn
             // 
@@ -481,7 +481,7 @@ namespace TRIPPLESIX
             this.modbtn.TabIndex = 18;
             this.modbtn.Text = "mod";
             this.modbtn.UseVisualStyleBackColor = false;
-            this.modbtn.Click += new System.EventHandler(this.BtnsClick);
+            this.modbtn.Click += new System.EventHandler(this.ActionBtns);
             // 
             // problemBox
             // 
@@ -515,7 +515,7 @@ namespace TRIPPLESIX
             this.zerobtn.TabIndex = 0;
             this.zerobtn.Text = "0";
             this.zerobtn.UseVisualStyleBackColor = false;
-            this.zerobtn.Click += new System.EventHandler(this.BtnsClick);
+            this.zerobtn.Click += new System.EventHandler(this.NumsBtns);
             // 
             // button2
             // 
@@ -531,7 +531,7 @@ namespace TRIPPLESIX
             this.button2.TabIndex = 21;
             this.button2.Text = "←";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.BtnsClick);
+            this.button2.Click += new System.EventHandler(this.Deleter);
             // 
             // celc
             // 

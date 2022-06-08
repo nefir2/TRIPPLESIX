@@ -47,6 +47,8 @@ namespace TRIPPLESIX
 		/// </summary>
 		bool haveAns = false;
 
+
+
 		//методы
 		/// <summary>
 		/// метод возвращающий факториал числа.
@@ -184,19 +186,7 @@ namespace TRIPPLESIX
 		private void BtnsClick(object sender, EventArgs e)
 		{
 			who = sender as Button; //распаковка отправителя в класс Button.
-			if (who.Text == "Clear") problemBox.Text = ""; //если нажатая кнопка Clear, то очищается окно.
-			else if (who.Text == "Clear All") //если нажата кнопка Clear All,
-			{                                 //то очищаются все поля и окно.
-				left = 0;
-				right = 0;
-				sign = '+';
-				who = null; 
-				isHaveSign = false;
-				haveAns = false;
-				problemBox.Text = "";
-				return;
-			}
-			else if (who.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число. //⌫
+			
 			if (haveAns) //если в окне есть ответ, при нажатии любой другой клавиши:
 			{ 				
 				if (problemBox.Text != "") left = decimal.Parse(problemBox.Text); //ответ запоминается как левое число,
@@ -204,6 +194,43 @@ namespace TRIPPLESIX
 				haveAns = false;
 			}
 			problemBoxInsert(); //вывод нажимаемых кнопок в окно.
+		}
+		private void Deleter(object sender, EventArgs e)
+		{
+			Button sended = sender as Button;
+			if (sended.Text == "Clear") problemBox.Text = ""; //если нажатая кнопка Clear, то очищается окно.
+			else if (sended.Text == "Clear All") //если нажата кнопка Clear All,
+			{                                 //то очищаются все поля и окно.
+				left = 0;
+				right = 0;
+				sign = '+';
+				who = null;
+				isHaveSign = false;
+				haveAns = false;
+				problemBox.Text = "";
+				return;
+			}
+			else if (sended.Text == "←") BackSpace(); //если нажата кнопка ←, то очищается последнее введённое число. //⌫
+		}
+		private void ActionBtns(object sender, EventArgs e)
+		{
+
+		}
+
+		private void EqualBtn(object sender, EventArgs e)
+		{
+
+		}
+
+		private void NumsBtns(object sender, EventArgs e)
+		{
+			Button sended = sender as Button;
+			problemBox.Text += sended.Text;
+		}
+
+		private void PointBtn(object sender, EventArgs e)
+		{
+
 		}
 
 
@@ -237,7 +264,7 @@ namespace TRIPPLESIX
 		{
 			Application.Exit();
 		}
-	}
+    }
 }
 //MessageBox.Show
 //(

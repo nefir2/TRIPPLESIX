@@ -23,9 +23,26 @@ namespace TRIPPLESIX
 		}
 
 		//поля
+		/// <summary>
+		/// поле с объектом рандома.
+		/// </summary>
 		Random rnd = new Random();
 
+		/// <summary>
+		/// поле с оставшимся временем для таймера.
+		/// </summary>
+		int secs;
+
 		//методы
+		private void NewLoca()
+		{
+			button1.Location = new Point
+			{
+				X = rnd.Next(0, 1100),
+				Y = rnd.Next(0, 600)
+			};
+		}
+		//события
 		/// <summary>
 		/// если пользователь наводится на кнопку, то кнопка убегает.
 		/// </summary>
@@ -33,12 +50,18 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void Runaway(object sender, EventArgs e)
 		{
-			Thread.Sleep(500);
-			button1.Location = new Point
-            {
-                X = rnd.Next(0, 1100),
-                Y = rnd.Next(0, 600)
-            };
+			secs = 2;
+			time.Start();
+		}
+
+		private void Timedout(object sender, EventArgs e)
+		{
+			if (secs > 0) secs--;
+			else
+			{
+				time.Stop();
+				NewLoca();
+			}
 		}
 
 		private void Resizing(object sender, EventArgs e)
@@ -81,5 +104,5 @@ namespace TRIPPLESIX
 				tb.Show();
 			}
 		}
-    }
+	}
 }
