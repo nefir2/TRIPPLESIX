@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace TRIPPLESIX
@@ -19,13 +20,13 @@ namespace TRIPPLESIX
 			tenBox.SelectAll();
 		}
 
-		//методы
+		//		обработчики событий.
 		/// <summary>
 		/// обработчик события нажатия на клавишу при фокусе на одном полей ввода.
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void ConverterBase(object sender, KeyEventArgs e)
+		private void ConverterBase(object sender, EventArgs e)
 		{
 			labelException.Text = ""; //очистка поля с ошибками.
 			TextBox sended = sender as TextBox; //распаковка отправителя события.
@@ -35,33 +36,33 @@ namespace TRIPPLESIX
 				sixteenBox.Text = "";
 				eightBox.Text = "";
 				twoBox.Text = "";
-				return;
-            }
-			try
+				return; //выход из метода для предотвращения ошибок.
+			}
+			try //попытка преобразовать string в long.
 			{
 				long tenbase;
 				if (sended == tenBox)
 				{
-					sixteenBox.Text = Convert.ToString(long.Parse(tenBox.Text), 16);
+					sixteenBox.Text = Convert.ToString(long.Parse(tenBox.Text), 16); 
 					eightBox.Text = Convert.ToString(long.Parse(tenBox.Text), 8);
 					twoBox.Text = Convert.ToString(long.Parse(tenBox.Text), 2);
 				}
 				else if (sended == sixteenBox)
-                {
+				{
 					tenbase = Convert.ToInt64(sixteenBox.Text, 16);
 					tenBox.Text = $"{tenbase}";
 					eightBox.Text = Convert.ToString(tenbase, 8);
 					twoBox.Text = Convert.ToString(tenbase, 2);
-                }
+				}
 				else if (sended == eightBox)
-                {
+				{
 					tenbase = Convert.ToInt64(eightBox.Text, 8);
 					tenBox.Text = $"{tenbase}";
 					sixteenBox.Text = Convert.ToString(tenbase, 16);
 					twoBox.Text = Convert.ToString(tenbase, 2);
-                }
+				}
 				else if (sended == twoBox)
-                {
+				{
 					tenbase = Convert.ToInt64(twoBox.Text, 2);
 					tenBox.Text = $"{tenbase}";
 					sixteenBox.Text = Convert.ToString(tenbase, 16);
@@ -71,6 +72,13 @@ namespace TRIPPLESIX
 			catch (FormatException) { labelException.Text = "вот ты и ввёл непонятно что вместо числа. это всё, чего ты добился в жизни?"; }
 			catch (OverflowException) { labelException.Text = "слишком большое значение - это не хорошо."; }
 		}
+		/// <summary>
+		/// обработчик события нажатия или фокусировки поля ввода.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Selecter(object sender, EventArgs e) => (sender as TextBox).SelectAll(); //выделяет весь текст.
+
 
 		//важные методы для всех форм.
 		/// <summary>
@@ -103,9 +111,5 @@ namespace TRIPPLESIX
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-        private void Selecter(object sender, EventArgs e)
-        {
-			(sender as TextBox).SelectAll();
-        }
-    }
+	}
 }

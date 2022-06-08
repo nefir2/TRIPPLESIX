@@ -138,7 +138,7 @@ namespace TRIPPLESIX
 					MessageBox.Show
 					(
 						caption: "ну и ну",
-						text: "ты каким образом смог получить здесь эксепшн?\n\n" + ex
+						text: "ты каким образом смог получить здесь эксепшн?\n\n" + ex.Message
 					);
 				}
 			}
@@ -324,7 +324,7 @@ namespace TRIPPLESIX
 			problemBox.Text += sended; //вывод текста, имеющегося на нажатой кнопке.
 		}
 		/// <summary>
-		/// метод устанавливающий в <see langword="private"/> поле <see cref="num"/> число указанное в окне вывода.
+		/// установка в <see langword="private"/> поле <see cref="num"/> число указанное в окне вывода.
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -332,6 +332,15 @@ namespace TRIPPLESIX
 		{
 			try { num = decimal.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
 			catch { BackSpace(); } //если не получается это сделать, то удаляется последний выведенный знак.
+		}
+		/// <summary>
+		/// метод для изменения знака числа в поле ввода.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Negate(object sender, EventArgs e)
+		{
+			problemBox.Text = $"{-num}";
 		}
 
 
@@ -361,6 +370,5 @@ namespace TRIPPLESIX
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
-
     }
 }
