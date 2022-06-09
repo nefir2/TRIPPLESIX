@@ -161,6 +161,8 @@ namespace TRIPPLESIX
 				{
 					case '^':
 						return Power(left, right);
+					case '!':
+						return GetFact();
 					case '%':
 						return left % right;
 					case '/':
@@ -255,7 +257,12 @@ namespace TRIPPLESIX
 				{
 					right = num;
 					right = GetAns(prevsn);
-				}
+                }
+                else if (left == null && problemBox.Text != "")
+				{
+					right = num;
+					right = GetAns(action);
+                }
 
 				problemBox.Text = $"{GetFact()}";
 				return;
