@@ -186,11 +186,11 @@ namespace TRIPPLESIX
 				return 0;
 			}
 			catch (DivideByZeroException ex) //если произошло деление на 0.
-            {
+			{
 				MessageBox.Show("молодец! поздравляю! ты решил калькулятор!\n\n" + ex.Message, "успех!");
 				UseDefault();
 				return 0;
-            }
+			}
 		}
 		/// <summary>
 		/// метод возвращающий факториал какого либо числа.
@@ -204,12 +204,6 @@ namespace TRIPPLESIX
 			else if (this.left != null) return Factorial(left);
 			else return 0;
 		}
-		/// <summary>
-		/// установка значений с экрана в поля.
-		/// </summary>
-		/// <remarks>
-		/// устанавливает в поля <see cref="right"/> или <see cref="left"/> значения с экрана.
-		/// </remarks>
 		//		обработчики событий.
 		/// <summary>
 		/// обработчик событий нажатий на любую из кнопок.
@@ -257,12 +251,12 @@ namespace TRIPPLESIX
 				{
 					right = num;
 					right = GetAns(prevsn);
-                }
-                else if (left == null && problemBox.Text != "")
+				}
+				else if (left == null && problemBox.Text != "")
 				{
 					right = num;
 					right = GetAns(action);
-                }
+				}
 
 				problemBox.Text = $"{GetFact()}";
 				return;
@@ -377,5 +371,5 @@ namespace TRIPPLESIX
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
-    }
+	}
 }
