@@ -32,6 +32,7 @@ namespace TRIPPLESIX
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(celc));
             this.btnback = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btndel = new System.Windows.Forms.Button();
             this.btnclr = new System.Windows.Forms.Button();
             this.btnequals = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@ namespace TRIPPLESIX
             this.btnzero = new System.Windows.Forms.Button();
             this.btnbsp = new System.Windows.Forms.Button();
             this.labelLastValue = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +126,24 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.99087F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(349, 509);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(3, 417);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 63);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "+/-";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Negate);
             // 
             // btndel
             // 
@@ -549,24 +567,7 @@ namespace TRIPPLESIX
             this.labelLastValue.Size = new System.Drawing.Size(82, 69);
             this.labelLastValue.TabIndex = 28;
             this.labelLastValue.Text = "here will be sitting last value";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(3, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 63);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "+/-";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Negate);
+            this.labelLastValue.TextChanged += new System.EventHandler(this.SetPrevNum);
             // 
             // celc
             // 

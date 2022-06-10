@@ -17,6 +17,10 @@ namespace TRIPPLESIX
 
 		//поля
 		/// <summary>
+		/// прошлое число из лейбла прошлого значения.
+		/// </summary>
+		decimal prevNum;
+		/// <summary>
 		/// поле второго числа.
 		/// </summary>
 		decimal? right;
@@ -65,6 +69,7 @@ namespace TRIPPLESIX
 			action = '+';
 			right = null;
 			left = null;
+			prevNum = 0;
 			num = 0;
 			//конпки
 			fact = btnfactorial.Text;
@@ -258,7 +263,7 @@ namespace TRIPPLESIX
 					right = GetAns(action);
 				}
 
-				problemBox.Text = $"{GetFact()}";
+				problemBox.Text = $"{right}";
 				return;
 			}
 
@@ -294,12 +299,20 @@ namespace TRIPPLESIX
 			if (problemBox.Text != "") //если окно не пустое
 			{
 				//если не хватает правого числа.
-				if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
+				if (left == null && right == null)
+				{
+					left = num;
+					right = prevNum;
+				}
+				else if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
 				//получение ответа.
 				decimal ans = GetAns(action);
 				//вывод ответа в окно.
 				labelLastValue.Text = $"{num}";
-				problemBox.Text = $"{ans}"; 
+				problemBox.Text = $"{ans}";
+
+				//установка первого числа для бесконечного действия.
+				prevNum = (decimal)right;
 
 				//восстановление значений полей.
 				left = null;
@@ -343,7 +356,16 @@ namespace TRIPPLESIX
 		{
 			problemBox.Text = $"{-num}";
 		}
-
+		/// <summary>
+		/// обработчик события изменения поля прошлого ввода.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void SetPrevNum(object sender, EventArgs e)
+		{
+			try { prevNum = decimal.Parse(problemBox.Text); }
+			catch { prevNum = 0; }
+		}
 
 
 		//важные методы для всех форм.
