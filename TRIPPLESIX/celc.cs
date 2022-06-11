@@ -312,7 +312,7 @@ namespace TRIPPLESIX
 				problemBox.Text = $"{ans}";
 
 				//установка первого числа для бесконечного действия.
-				prevNum = (decimal)right;
+				prevNum = right ?? 0;
 
 				//восстановление значений полей.
 				left = null;
