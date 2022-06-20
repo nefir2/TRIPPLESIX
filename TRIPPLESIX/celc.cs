@@ -17,6 +17,10 @@ namespace TRIPPLESIX
 
 		//поля
 		/// <summary>
+		/// прошлое число из лейбла прошлого значения.
+		/// </summary>
+		decimal prevNum;
+		/// <summary>
 		/// поле второго числа.
 		/// </summary>
 		decimal? right;
@@ -65,6 +69,7 @@ namespace TRIPPLESIX
 			action = '+';
 			right = null;
 			left = null;
+			prevNum = 0;
 			num = 0;
 			//конпки
 			fact = btnfactorial.Text;
@@ -204,12 +209,6 @@ namespace TRIPPLESIX
 			else if (this.left != null) return Factorial(left);
 			else return Factorial(num);
 		}
-		/// <summary>
-		/// установка значений с экрана в поля.
-		/// </summary>
-		/// <remarks>
-		/// устанавливает в поля <see cref="right"/> или <see cref="left"/> значения с экрана.
-		/// </remarks>
 		//		обработчики событий.
 		/// <summary>
 		/// обработчик событий нажатий на любую из кнопок.
@@ -300,12 +299,20 @@ namespace TRIPPLESIX
 			if (problemBox.Text != "") //если окно не пустое
 			{
 				//если не хватает правого числа.
-				if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
+				if (left == null && right == null)
+				{
+					left = num;
+					right = prevNum;
+				}
+				else if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
 				//получение ответа.
 				decimal ans = GetAns(action);
 				//вывод ответа в окно.
 				labelLastValue.Text = $"{num}";
-				problemBox.Text = $"{ans}"; 
+				problemBox.Text = $"{ans}";
+
+				//установка первого числа для бесконечного действия.
+				prevNum = right ?? 0;
 
 				//восстановление значений полей.
 				left = null;
@@ -349,7 +356,16 @@ namespace TRIPPLESIX
 		{
 			problemBox.Text = $"{-num}";
 		}
-
+		/// <summary>
+		/// обработчик события изменения поля прошлого ввода.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void SetPrevNum(object sender, EventArgs e)
+		{
+			try { prevNum = decimal.Parse(problemBox.Text); }
+			catch { prevNum = 0; }
+		}
 
 
 		//важные методы для всех форм.
