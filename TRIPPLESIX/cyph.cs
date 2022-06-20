@@ -98,5 +98,11 @@ namespace TRIPPLESIX
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void Closer(object sender, FormClosingEventArgs e) => Application.Exit();
-	}
+
+		private void selecter(object sender, MouseEventArgs e)
+		{
+			if (outpBox.SelectedText != "") outpBox.Select(0, 0);
+			else outpBox.SelectAll();
+		}
+    }
 }
