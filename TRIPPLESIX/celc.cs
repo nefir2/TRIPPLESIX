@@ -19,15 +19,15 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// поле второго числа.
 		/// </summary>
-		decimal? right;
+		double? right;
 		/// <summary>
 		/// поле первого числа.
 		/// </summary>
-		decimal? left;
+		double? left;
 		/// <summary>
 		/// вводимое число.
 		/// </summary>
-		decimal num;
+		double num;
 		/// <summary>
 		/// предыдущий знак действия.
 		/// </summary>
@@ -80,9 +80,9 @@ namespace TRIPPLESIX
 		/// </summary>
 		/// <param name="n">число, которому выдаётся факториал.</param>
 		/// <returns>факториал числа <paramref name="n"/>.</returns>
-		private decimal Factorial(decimal n)
+		private double Factorial(double n)
 		{
-			decimal ans = 1; //ответ, если цикл даже не запустится.
+			double ans = 1; //ответ, если цикл даже не запустится.
 			try //попытка выполнить команду.
 			{
 				for (int i = 2; i <= n; i++) ans *= i; //получение факториала.
@@ -100,9 +100,9 @@ namespace TRIPPLESIX
 		/// <param name="a">число возводимое в степень.</param>
 		/// <param name="b">степень в которую нужно возвести <paramref name="a"/>.</param>
 		/// <returns>число <paramref name="a"/> в степени <paramref name="b"/> типа <see cref="decimal"/> для больших чисел.</returns>
-		private decimal Power(decimal a, decimal b)
+		private double Power(double a, double b)
 		{
-			decimal ans = 1; //ответ, если цикл не запустится.
+			double ans = 1; //ответ, если цикл не запустится.
 			try //попытка возвести число в степень.
 			{
 				for (int i = 0; i < b; i++) ans *= a; //цикл для получения числа a в степени b
@@ -126,7 +126,7 @@ namespace TRIPPLESIX
 				problemBox.Text = x.ToString(); //возврат строки обратно в окно.
 				try 
 				{ //попытка перевести полученный текст в поле значения.
-					num = decimal.Parse(x.ToString()); //сохранение в поле полученного значения.
+					num = double.Parse(x.ToString()); //сохранение в поле полученного значения.
 				}
 				catch (FormatException)
 				{ //если не получилось из-за того что текст пустой, то выставление значения 0 для поля.
@@ -151,10 +151,10 @@ namespace TRIPPLESIX
 		/// </remarks>
 		/// <param name="sign">знак действия.</param>
 		/// <returns>ответ из двух полей, в зависимости от указанного знака действия.</returns>
-		private decimal GetAns(char action)
+		private double GetAns(char action)
 		{
-			decimal left = this.left ?? 0;
-			decimal right = this.right ?? 0;
+			double left = this.left ?? 0;
+			double right = this.right ?? 0;
 			try
 			{
 				switch (action)
@@ -196,10 +196,10 @@ namespace TRIPPLESIX
 		/// метод возвращающий факториал какого либо числа.
 		/// </summary>
 		/// <returns> факториал какого либо числа. типа <see cref="decimal"/>. </returns>
-		private decimal GetFact()
+		private double GetFact()
 		{
-			decimal left = this.left ?? 0;
-			decimal right = this.right ?? 0;
+			double left = this.left ?? 0;
+			double right = this.right ?? 0;
 			if (this.right != null) return Factorial(right);
 			else if (this.left != null) return Factorial(left);
 			else return 0;
@@ -302,7 +302,7 @@ namespace TRIPPLESIX
 				//если не хватает правого числа.
 				if (right == null) right = num; //если второе число null, то второе число - значение с экрана.
 				//получение ответа.
-				decimal ans = GetAns(action);
+				double ans = GetAns(action);
 				//вывод ответа в окно.
 				labelLastValue.Text = $"{num}";
 				problemBox.Text = $"{ans}"; 
@@ -337,7 +337,7 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void SetNum(object sender, EventArgs e)
 		{
-			try { num = decimal.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
+			try { num = double.Parse(problemBox.Text); } //для проверки выведенного текста, проводится попытка перевести выведенный в окно текст в тип децимал.
 			catch { BackSpace(); } //если не получается это сделать, то удаляется последний выведенный знак.
 		}
 		/// <summary>
