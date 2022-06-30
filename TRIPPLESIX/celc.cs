@@ -19,7 +19,7 @@ namespace TRIPPLESIX
 		/// <summary>
 		/// прошлое число из лейбла прошлого значения.
 		/// </summary>
-		decimal prevNum;
+		double prevNum;
 		/// <summary>
 		/// поле второго числа.
 		/// </summary>
@@ -97,6 +97,10 @@ namespace TRIPPLESIX
 				MessageBox.Show("ты мне тут слишком бальшые цыферки не набирай, я тут взорву тебе ща комп понял!!\n" + ex, "слыыш");
 				return -1; //вывод сообщения об этом, и возврат числа -1.
 			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("тычево наделол....\n\n" + ex, "што...");
+			}
 			return ans; //возврат ответа если всё прошло успешно.
 		}
 		/// <summary>
@@ -117,6 +121,10 @@ namespace TRIPPLESIX
 				MessageBox.Show("ты мне тут слишком бальшые цыферки не набирай, я тут взорву тебе ща комп понял!!\n" + ex, "слыыш");
 				return -1; //вывод сообщения об этом и возврат числа -1.
 			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("тычево наделол....\n\n" + ex, "што...");
+			}
 			return ans; //возврат числа если всё прошло успешно.
 		}
 		/// <summary>
@@ -133,10 +141,13 @@ namespace TRIPPLESIX
 				{ //попытка перевести полученный текст в поле значения.
 					num = double.Parse(x.ToString()); //сохранение в поле полученного значения.
 				}
-				catch (FormatException)
+				catch (FormatException) when (x.Length == 0)
 				{ //если не получилось из-за того что текст пустой, то выставление значения 0 для поля.
-					if (x.Length != 0) throw; //но если не из-за этого, то -->
 					num = 0;
+				}
+				catch (FormatException ex)
+				{
+					MessageBox.Show("ну вот что ты сделал, ты как этот эксепшн смог сделать?\n\n" + ex, "каво");
 				}
 				catch (Exception ex) // --> вывод этой ошибки.
 				{
@@ -363,7 +374,7 @@ namespace TRIPPLESIX
 		/// <param name="e"></param>
 		private void SetPrevNum(object sender, EventArgs e)
 		{
-			try { prevNum = decimal.Parse(problemBox.Text); }
+			try { prevNum = double.Parse(problemBox.Text); }
 			catch { prevNum = 0; }
 		}
 
