@@ -31,9 +31,9 @@ namespace TRIPPLESIX
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
             this.monthCalendar4 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,13 +65,13 @@ namespace TRIPPLESIX
             this.tableLayoutPanel1.Size = new System.Drawing.Size(897, 667);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // monthCalendar2
+            // monthCalendar4
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(205, 9);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2022, 1, 7, 0, 0, 0, 0), new System.DateTime(2022, 1, 13, 0, 0, 0, 0));
-            this.monthCalendar2.ShowWeekNumbers = true;
-            this.monthCalendar2.TabIndex = 1;
+            this.monthCalendar4.Location = new System.Drawing.Point(599, 9);
+            this.monthCalendar4.Name = "monthCalendar4";
+            this.monthCalendar4.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2022, 1, 1, 0, 0, 0, 0), new System.DateTime(2022, 1, 7, 0, 0, 0, 0));
+            this.monthCalendar4.ShowWeekNumbers = true;
+            this.monthCalendar4.TabIndex = 3;
             // 
             // monthCalendar3
             // 
@@ -81,13 +81,13 @@ namespace TRIPPLESIX
             this.monthCalendar3.ShowWeekNumbers = true;
             this.monthCalendar3.TabIndex = 2;
             // 
-            // monthCalendar4
+            // monthCalendar2
             // 
-            this.monthCalendar4.Location = new System.Drawing.Point(599, 9);
-            this.monthCalendar4.Name = "monthCalendar4";
-            this.monthCalendar4.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2022, 1, 1, 0, 0, 0, 0), new System.DateTime(2022, 1, 7, 0, 0, 0, 0));
-            this.monthCalendar4.ShowWeekNumbers = true;
-            this.monthCalendar4.TabIndex = 3;
+            this.monthCalendar2.Location = new System.Drawing.Point(205, 9);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2022, 1, 7, 0, 0, 0, 0), new System.DateTime(2022, 1, 13, 0, 0, 0, 0));
+            this.monthCalendar2.ShowWeekNumbers = true;
+            this.monthCalendar2.TabIndex = 1;
             // 
             // calendar
             // 

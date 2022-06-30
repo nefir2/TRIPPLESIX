@@ -55,7 +55,7 @@ namespace TRIPPLESIX
             this.button1.Location = new System.Drawing.Point(3, 695);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 25);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 4;
             this.button1.Text = "к кнопочкам";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Backer);
@@ -128,8 +128,9 @@ namespace TRIPPLESIX
             this.outpBox.Name = "outpBox";
             this.outpBox.ReadOnly = true;
             this.outpBox.Size = new System.Drawing.Size(1076, 522);
-            this.outpBox.TabIndex = 4;
+            this.outpBox.TabIndex = 3;
             this.outpBox.Text = "here will be secret or unsecret message";
+            this.outpBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.selecter);
             // 
             // label2
             // 
@@ -154,7 +155,7 @@ namespace TRIPPLESIX
             this.inpBox.Multiline = true;
             this.inpBox.Name = "inpBox";
             this.inpBox.Size = new System.Drawing.Size(1076, 113);
-            this.inpBox.TabIndex = 6;
+            this.inpBox.TabIndex = 1;
             this.inpBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SecretTheMess);
             // 
             // label3
